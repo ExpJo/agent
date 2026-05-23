@@ -1,0 +1,368 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://montreal-idea-engine.local/schemas/v1.0.0.json",
+  "title": "Montreal Idea Engine Schemas",
+  "description": "JSON Schema for raw idea files (Phase 2) and ranked index (Phase 3). Framework version 1.0.0.",
+  "definitions": {
+    "isoDateTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 datetime"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "URL-safe identifier, e.g. oqlf-francization-checklist"
+    },
+    "confidenceTag": {
+      "type": "string",
+      "enum": [
+        "verified",
+        "hypothesis",
+        "pain-verified",
+        "pain-anecdotal",
+        "regulatory",
+        "seasonal",
+        "import-gap"
+      ]
+    },
+    "cadRange": {
+      "type": "object",
+      "required": ["low", "high"],
+      "properties": {
+        "low": { "type": "number", "minimum": 0 },
+        "high": { "type": "number", "minimum": 0 }
+      },
+      "description": "Monthly or 60-day revenue range in CAD"
+    },
+    "sourceRef": {
+      "type": "object",
+      "required": ["url", "title"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "title": { "type": "string" },
+        "accessedAt": { "$ref": "#/definitions/isoDateTime" },
+        "grade": {
+          "type": "string",
+          "enum": ["A", "B", "C", "D"],
+          "description": "Source quality per data-sources.md"
+        },
+        "quote": { "type": "string" },
+        "signalType": { "$ref": "#/definitions/confidenceTag" }
+      }
+    },
+    "mvpScope": {
+      "type": "object",
+      "required": ["coreJob", "mustHave", "wontHave", "buildDays"],
+      "properties": {
+        "coreJob": { "type": "string" },
+        "mustHave": {
+          "type": "array",
+          "items": { "type": "string" },
+          "maxItems": 5
+        },
+        "wontHave": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "stack": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "buildDays": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 14
+        },
+        "conciergeFallback": { "type": "string" }
+      }
+    },
+    "hardGates": {
+      "type": "object",
+      "required": ["g1_montrealAnchor", "g2_sevenDayShip", "g3_cashPath", "g4_soloOps", "g5_legal"],
+      "properties": {
+        "g1_montrealAnchor": { "$ref": "#/definitions/gateResult" },
+        "g2_sevenDayShip": { "$ref": "#/definitions/gateResult" },
+        "g3_cashPath": { "$ref": "#/definitions/gateResult" },
+        "g4_soloOps": { "$ref": "#/definitions/gateResult" },
+        "g5_legal": { "$ref": "#/definitions/gateResult" },
+        "allPassed": { "type": "boolean" }
+      }
+    },
+    "gateResult": {
+      "type": "object",
+      "required": ["passed", "notes"],
+      "properties": {
+        "passed": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    },
+    "movsBreakdown": {
+      "type": "object",
+      "required": [
+        "painEvidence",
+        "montrealAnchor",
+        "sevenDayShip",
+        "cashPath",
+        "soloSustainability",
+        "gtmReach"
+      ],
+      "properties": {
+        "painEvidence": { "type": "number", "minimum": 0, "maximum": 10 },
+        "montrealAnchor": { "type": "number", "minimum": 0, "maximum": 10 },
+        "sevenDayShip": { "type": "number", "minimum": 0, "maximum": 10 },
+        "cashPath": { "type": "number", "minimum": 0, "maximum": 10 },
+        "soloSustainability": { "type": "number", "minimum": 0, "maximum": 10 },
+        "gtmReach": { "type": "number", "minimum": 0, "maximum": 10 }
+      },
+      "additionalProperties": false
+    },
+    "jtbd": {
+      "type": "object",
+      "required": ["situation", "persona", "motivation", "outcome"],
+      "properties": {
+        "situation": { "type": "string" },
+        "persona": { "type": "string" },
+        "motivation": { "type": "string" },
+        "outcome": { "type": "string" },
+        "statement": {
+          "type": "string",
+          "description": "Full JTBD sentence"
+        }
+      }
+    },
+    "RawIdea": {
+      "type": "object",
+      "title": "RawIdea",
+      "description": "Phase 2 output — one file per candidate in data/ideas/",
+      "required": [
+        "id",
+        "title",
+        "tagline",
+        "collectedAt",
+        "jtbd",
+        "montrealAngle",
+        "mvpScope",
+        "sources"
+      ],
+      "properties": {
+        "id": { "$ref": "#/definitions/slug" },
+        "title": { "type": "string", "minLength": 3 },
+        "tagline": { "type": "string", "maxLength": 160 },
+        "collectedAt": { "$ref": "#/definitions/isoDateTime" },
+        "frameworkVersion": {
+          "type": "string",
+          "const": "1.0.0"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "collected", "validated", "disqualified"],
+          "default": "collected"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "b2b-micro-saas",
+            "local-services",
+            "compliance-regtech",
+            "marketplace",
+            "consumer",
+            "hospitality-tourism",
+            "property-real-estate",
+            "other"
+          ]
+        },
+        "jtbd": { "$ref": "#/definitions/jtbd" },
+        "montrealAngle": {
+          "type": "string",
+          "description": "Why Montreal specifically — borough, law, culture, gap"
+        },
+        "whyNow": { "type": "string" },
+        "persona": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string", "description": "e.g. 25-employee Saint-Laurent manufacturer" },
+            "borough": { "type": "string" },
+            "language": { "type": "string", "enum": ["fr", "en", "bilingual"] },
+            "estimatedCount": { "type": "integer" },
+            "countSource": { "type": "string" }
+          }
+        },
+        "competitors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "montrealPresence": {
+                "type": "string",
+                "enum": ["strong", "weak", "none", "unknown"]
+              },
+              "notes": { "type": "string" }
+            }
+          }
+        },
+        "mvpScope": { "$ref": "#/definitions/mvpScope" },
+        "businessModel": {
+          "type": "object",
+          "properties": {
+            "pricingCAD": { "type": "string" },
+            "firstCustomer": { "type": "string" },
+            "revenue60Day": { "$ref": "#/definitions/cadRange" }
+          }
+        },
+        "gtm": {
+          "type": "object",
+          "properties": {
+            "firstTenCustomers": {
+              "type": "array",
+              "items": { "type": "string" },
+              "maxItems": 10
+            },
+            "channels": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "statement": { "type": "string" },
+              "confidence": { "$ref": "#/definitions/confidenceTag" },
+              "testMethod": { "type": "string" }
+            }
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/sourceRef" },
+          "minItems": 1
+        },
+        "gates": { "$ref": "#/definitions/hardGates" },
+        "scores": {
+          "type": "object",
+          "description": "Filled in Phase 3",
+          "properties": {
+            "breakdown": { "$ref": "#/definitions/movsBreakdown" },
+            "total": { "type": "number", "minimum": 0, "maximum": 10 },
+            "scoredAt": { "$ref": "#/definitions/isoDateTime" }
+          }
+        },
+        "briefPath": {
+          "type": "string",
+          "description": "Relative path from data/ranked/, e.g. briefs/my-idea.md"
+        }
+      }
+    },
+    "RankedIdea": {
+      "type": "object",
+      "title": "RankedIdea",
+      "description": "Entry in data/ranked/index.json — matches ui/src/types.ts",
+      "required": ["id", "rank", "title", "tagline", "score"],
+      "properties": {
+        "id": { "$ref": "#/definitions/slug" },
+        "rank": { "type": "integer", "minimum": 1 },
+        "title": { "type": "string" },
+        "tagline": { "type": "string" },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10,
+          "description": "MOVS composite, 1 decimal"
+        },
+        "scoreBreakdown": { "$ref": "#/definitions/movsBreakdown" },
+        "category": { "type": "string" },
+        "buildDays": { "type": "integer", "minimum": 1, "maximum": 14 },
+        "revenuePotentialCAD": { "$ref": "#/definitions/cadRange" },
+        "briefPath": {
+          "type": "string",
+          "description": "Path relative to data/ranked/, e.g. briefs/slug.md"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["ranked", "hypothesis", "verified", "disqualified"],
+          "default": "ranked"
+        }
+      }
+    },
+    "RankedIndex": {
+      "type": "object",
+      "title": "RankedIndex",
+      "description": "Manifest at data/ranked/index.json",
+      "required": ["ideas"],
+      "properties": {
+        "$schema": { "type": "string" },
+        "generatedAt": { "$ref": "#/definitions/isoDateTime" },
+        "frameworkVersion": {
+          "type": "string",
+          "const": "1.0.0"
+        },
+        "methodologySummary": {
+          "type": "string",
+          "description": "One-line pointer to MOVS"
+        },
+        "totalCollected": { "type": "integer" },
+        "totalQualified": { "type": "integer" },
+        "ideas": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/RankedIdea" }
+        }
+      }
+    }
+  },
+  "oneOf": [
+    { "$ref": "#/definitions/RawIdea" },
+    { "$ref": "#/definitions/RankedIndex" }
+  ],
+  "examples": [
+    {
+      "title": "RankedIndex example",
+      "generatedAt": "2026-05-23T12:00:00Z",
+      "frameworkVersion": "1.0.0",
+      "methodologySummary": "MOVS v1.0.0 — Montreal Opportunity Velocity Score",
+      "totalCollected": 0,
+      "totalQualified": 0,
+      "ideas": []
+    },
+    {
+      "title": "RawIdea example (structure only — not a collected idea)",
+      "id": "example-slug",
+      "title": "Example Title",
+      "tagline": "One-line description under 160 chars",
+      "collectedAt": "2026-05-23T12:00:00Z",
+      "frameworkVersion": "1.0.0",
+      "status": "draft",
+      "category": "b2b-micro-saas",
+      "jtbd": {
+        "situation": "When X happens",
+        "persona": "Montreal SMB owner",
+        "motivation": "they want to Y",
+        "outcome": "so they can Z",
+        "statement": "When X, Montreal SMB owner wants to Y so they can Z"
+      },
+      "montrealAngle": "Specific borough, law, or local gap",
+      "whyNow": "Regulatory or market timing",
+      "mvpScope": {
+        "coreJob": "Single job",
+        "mustHave": ["feature1"],
+        "wontHave": ["feature2"],
+        "stack": ["Next.js", "Supabase", "Stripe"],
+        "buildDays": 7,
+        "conciergeFallback": "Manual delivery via Airtable"
+      },
+      "sources": [
+        {
+          "url": "https://example.com",
+          "title": "Source title",
+          "accessedAt": "2026-05-23T12:00:00Z",
+          "grade": "B",
+          "signalType": "pain-verified"
+        }
+      ]
+    }
+  ]
+}
