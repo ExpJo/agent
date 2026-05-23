@@ -1,37 +1,410 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "RankedIdeasIndex",
-  "description": "Placeholder schema — agents will replace this with their own design in Phase 1",
-  "type": "object",
-  "properties": {
-    "generatedAt": { "type": "string", "format": "date-time" },
-    "frameworkVersion": { "type": "string" },
-    "ideas": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["id", "rank", "title", "tagline", "score"],
-        "properties": {
-          "id": { "type": "string" },
-          "rank": { "type": "integer", "minimum": 1 },
-          "title": { "type": "string" },
-          "tagline": { "type": "string" },
-          "score": { "type": "number" },
-          "scoreBreakdown": { "type": "object" },
-          "category": { "type": "string" },
-          "buildDays": { "type": "integer" },
-          "revenuePotentialCAD": {
-            "type": "object",
-            "properties": {
-              "low": { "type": "number" },
-              "high": { "type": "number" }
-            }
-          },
-          "briefPath": { "type": "string" },
-          "status": { "type": "string", "enum": ["ranked", "hypothesis", "verified"] }
-        }
-      }
+  "generatedAt": "2026-05-23T21:00:00Z",
+  "frameworkVersion": "1.0.0",
+  "methodologySummary": "MOVS v1.0.0 — Montreal Opportunity Velocity Score (6 dimensions, hard gates G1–G5)",
+  "totalCollected": 20,
+  "totalQualified": 20,
+  "ideas": [
+    {
+      "id": "mtl-tipping-compliance-scanner",
+      "rank": 1,
+      "title": "MTL Tipping Compliance Scanner",
+      "tagline": "Audit POS tipping for Quebec pre-tax rule — built for Montreal restaurants.",
+      "score": 8.5,
+      "scoreBreakdown": {
+        "painEvidence": 9.0,
+        "montrealAnchor": 8.0,
+        "sevenDayShip": 9.0,
+        "cashPath": 8.0,
+        "soloSustainability": 9.0,
+        "gtmReach": 8.0
+      },
+      "category": "compliance-regtech",
+      "buildDays": 5,
+      "revenuePotentialCAD": { "low": 2000, "high": 8000 },
+      "briefPath": "briefs/mtl-tipping-compliance-scanner.md",
+      "status": "verified"
+    },
+    {
+      "id": "str-summer-permit-navigator",
+      "rank": 2,
+      "title": "STR Summer Permit Navigator",
+      "tagline": "Montreal host permit prep for the June 10-Sept 10 legal rental window.",
+      "score": 8.2,
+      "scoreBreakdown": {
+        "painEvidence": 7.0,
+        "montrealAnchor": 9.0,
+        "sevenDayShip": 9.0,
+        "cashPath": 8.0,
+        "soloSustainability": 9.0,
+        "gtmReach": 6.0
+      },
+      "category": "compliance-regtech",
+      "buildDays": 6,
+      "revenuePotentialCAD": { "low": 2000, "high": 8000 },
+      "briefPath": "briefs/str-summer-permit-navigator.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "juillet-premier-move-coordinator",
+      "rank": 3,
+      "title": "Juillet Premier Move Coordinator",
+      "tagline": "July 1 moving checklist + service booking for Montreal lease-change households.",
+      "score": 8.2,
+      "scoreBreakdown": {
+        "painEvidence": 8.0,
+        "montrealAnchor": 10.0,
+        "sevenDayShip": 9.0,
+        "cashPath": 7.0,
+        "soloSustainability": 9.0,
+        "gtmReach": 5.0
+      },
+      "category": "consumer",
+      "buildDays": 5,
+      "revenuePotentialCAD": { "low": 2000, "high": 10000 },
+      "briefPath": "briefs/juillet-premier-move-coordinator.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "resto-tfw-francization-kit",
+      "rank": 4,
+      "title": "Resto TFW Francization Kit",
+      "tagline": "French workplace onboarding templates for Montreal restaurants hiring temporary foreign workers.",
+      "score": 8.1,
+      "scoreBreakdown": {
+        "painEvidence": 7.0,
+        "montrealAnchor": 9.0,
+        "sevenDayShip": 9.0,
+        "cashPath": 7.0,
+        "soloSustainability": 9.0,
+        "gtmReach": 8.0
+      },
+      "category": "compliance-regtech",
+      "buildDays": 5,
+      "revenuePotentialCAD": { "low": 1500, "high": 5000 },
+      "briefPath": "briefs/resto-tfw-francization-kit.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "oqlf-francization-readiness",
+      "rank": 5,
+      "title": "OQLF Francization Readiness Kit",
+      "tagline": "Self-assessment + action plan for Montreal employers hitting the 25-employee Bill 96 threshold.",
+      "score": 8.0,
+      "scoreBreakdown": {
+        "painEvidence": 8.0,
+        "montrealAnchor": 9.0,
+        "sevenDayShip": 8.0,
+        "cashPath": 7.0,
+        "soloSustainability": 9.0,
+        "gtmReach": 7.0
+      },
+      "category": "compliance-regtech",
+      "buildDays": 7,
+      "revenuePotentialCAD": { "low": 1500, "high": 6000 },
+      "briefPath": "briefs/oqlf-francization-readiness.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "bill96-storefront-signage-check",
+      "rank": 6,
+      "title": "Bill 96 Storefront Signage Checker",
+      "tagline": "Photo audit tool for French predominant signage on Montreal retail storefronts.",
+      "score": 7.7,
+      "scoreBreakdown": {
+        "painEvidence": 8.0,
+        "montrealAnchor": 9.0,
+        "sevenDayShip": 7.5,
+        "cashPath": 7.0,
+        "soloSustainability": 7.0,
+        "gtmReach": 8.0
+      },
+      "category": "compliance-regtech",
+      "buildDays": 6,
+      "revenuePotentialCAD": { "low": 1200, "high": 5000 },
+      "briefPath": "briefs/bill96-storefront-signage-check.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "terrace-permit-renewal-tracker",
+      "rank": 7,
+      "title": "Terrace Permit Renewal Tracker",
+      "tagline": "Borough-specific café-terrasse permit deadlines for Montreal restaurants.",
+      "score": 7.7,
+      "scoreBreakdown": {
+        "painEvidence": 7.0,
+        "montrealAnchor": 9.0,
+        "sevenDayShip": 9.0,
+        "cashPath": 5.0,
+        "soloSustainability": 9.0,
+        "gtmReach": 8.0
+      },
+      "category": "compliance-regtech",
+      "buildDays": 5,
+      "revenuePotentialCAD": { "low": 800, "high": 4000 },
+      "briefPath": "briefs/terrace-permit-renewal-tracker.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "pme-digital-micro-audit",
+      "rank": 8,
+      "title": "PME Digital Micro-Audit",
+      "tagline": "Lightweight digital readiness report for Montreal SMBs — ESSOR-adjacent but sized for sub-$2.5M shops.",
+      "score": 7.5,
+      "scoreBreakdown": {
+        "painEvidence": 7.0,
+        "montrealAnchor": 7.0,
+        "sevenDayShip": 8.0,
+        "cashPath": 8.0,
+        "soloSustainability": 7.0,
+        "gtmReach": 8.0
+      },
+      "category": "b2b-micro-saas",
+      "buildDays": 7,
+      "revenuePotentialCAD": { "low": 2000, "high": 8000 },
+      "briefPath": "briefs/pme-digital-micro-audit.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "commercial-lease-renewal-workbook",
+      "rank": 9,
+      "title": "Commercial Lease Renewal Workbook",
+      "tagline": "Self-serve renewal prep for Ville-Émard and Monk Blvd merchants facing rent spikes.",
+      "score": 7.5,
+      "scoreBreakdown": {
+        "painEvidence": 7.0,
+        "montrealAnchor": 7.0,
+        "sevenDayShip": 9.0,
+        "cashPath": 6.0,
+        "soloSustainability": 9.0,
+        "gtmReach": 7.0
+      },
+      "category": "property-real-estate",
+      "buildDays": 5,
+      "revenuePotentialCAD": { "low": 800, "high": 3500 },
+      "briefPath": "briefs/commercial-lease-renewal-workbook.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "resto-shift-sms-board",
+      "rank": 10,
+      "title": "Resto Shift SMS Board",
+      "tagline": "Last-minute shift coverage via SMS for Montreal restaurants hit by labour shortages.",
+      "score": 7.5,
+      "scoreBreakdown": {
+        "painEvidence": 8.0,
+        "montrealAnchor": 8.0,
+        "sevenDayShip": 8.0,
+        "cashPath": 6.0,
+        "soloSustainability": 8.0,
+        "gtmReach": 7.0
+      },
+      "category": "b2b-micro-saas",
+      "buildDays": 7,
+      "revenuePotentialCAD": { "low": 500, "high": 2500 },
+      "briefPath": "briefs/resto-shift-sms-board.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "sdc-wellington-lease-prep",
+      "rank": 11,
+      "title": "SDC Wellington Lease Renewal Prep",
+      "tagline": "Rent comps and negotiation prep for Verdun merchants facing commercial lease renewal.",
+      "score": 7.4,
+      "scoreBreakdown": {
+        "painEvidence": 8.0,
+        "montrealAnchor": 8.0,
+        "sevenDayShip": 7.0,
+        "cashPath": 7.0,
+        "soloSustainability": 6.0,
+        "gtmReach": 9.0
+      },
+      "category": "property-real-estate",
+      "buildDays": 7,
+      "revenuePotentialCAD": { "low": 1000, "high": 5000 },
+      "briefPath": "briefs/sdc-wellington-lease-prep.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "condo-str-violation-log",
+      "rank": 12,
+      "title": "Condo STR Violation Log",
+      "tagline": "Track and document illegal STR listings for Montreal condo syndicates.",
+      "score": 7.4,
+      "scoreBreakdown": {
+        "painEvidence": 8.0,
+        "montrealAnchor": 8.0,
+        "sevenDayShip": 8.0,
+        "cashPath": 6.0,
+        "soloSustainability": 8.0,
+        "gtmReach": 6.0
+      },
+      "category": "property-real-estate",
+      "buildDays": 6,
+      "revenuePotentialCAD": { "low": 500, "high": 3000 },
+      "briefPath": "briefs/condo-str-violation-log.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "snow-damage-claim-assistant",
+      "rank": 13,
+      "title": "Snow Damage Claim Assistant",
+      "tagline": "15-day claim tracker for Montreal property managers after snow removal damage.",
+      "score": 7.3,
+      "scoreBreakdown": {
+        "painEvidence": 8.0,
+        "montrealAnchor": 9.0,
+        "sevenDayShip": 8.0,
+        "cashPath": 5.0,
+        "soloSustainability": 8.0,
+        "gtmReach": 5.0
+      },
+      "category": "property-real-estate",
+      "buildDays": 6,
+      "revenuePotentialCAD": { "low": 1000, "high": 4500 },
+      "briefPath": "briefs/snow-damage-claim-assistant.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "mtl-festival-vendor-deadlines",
+      "rank": 14,
+      "title": "MTL Festival Vendor Deadline Hub",
+      "tagline": "Permit and application calendar for Montreal pop-up vendors and food trucks.",
+      "score": 7.2,
+      "scoreBreakdown": {
+        "painEvidence": 6.0,
+        "montrealAnchor": 8.0,
+        "sevenDayShip": 9.0,
+        "cashPath": 5.0,
+        "soloSustainability": 9.0,
+        "gtmReach": 6.0
+      },
+      "category": "local-services",
+      "buildDays": 5,
+      "revenuePotentialCAD": { "low": 400, "high": 2000 },
+      "briefPath": "briefs/mtl-festival-vendor-deadlines.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "palais-congress-restaurant-pulse",
+      "rank": 15,
+      "title": "Palais des Congrès Restaurant Pulse",
+      "tagline": "Convention-week demand forecasts for downtown Montreal restaurants.",
+      "score": 7.2,
+      "scoreBreakdown": {
+        "painEvidence": 6.0,
+        "montrealAnchor": 9.0,
+        "sevenDayShip": 8.0,
+        "cashPath": 5.0,
+        "soloSustainability": 9.0,
+        "gtmReach": 7.0
+      },
+      "category": "hospitality-tourism",
+      "buildDays": 7,
+      "revenuePotentialCAD": { "low": 500, "high": 3000 },
+      "briefPath": "briefs/palais-congress-restaurant-pulse.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "student-july1-move-kit",
+      "rank": 16,
+      "title": "Student July 1 Move Kit",
+      "tagline": "McGill/Concordia student move-in checklist for Montreal lease transfers and borough rules.",
+      "score": 7.2,
+      "scoreBreakdown": {
+        "painEvidence": 7.0,
+        "montrealAnchor": 9.0,
+        "sevenDayShip": 9.0,
+        "cashPath": 4.0,
+        "soloSustainability": 9.0,
+        "gtmReach": 5.0
+      },
+      "category": "consumer",
+      "buildDays": 4,
+      "revenuePotentialCAD": { "low": 500, "high": 3000 },
+      "briefPath": "briefs/student-july1-move-kit.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "plateau-freelancer-tax-reserve",
+      "rank": 17,
+      "title": "Plateau Freelancer Tax Reserve Calculator",
+      "tagline": "QST/GST and Revenu Québec instalment planner for Mile End creatives.",
+      "score": 6.6,
+      "scoreBreakdown": {
+        "painEvidence": 7.0,
+        "montrealAnchor": 5.0,
+        "sevenDayShip": 8.0,
+        "cashPath": 5.0,
+        "soloSustainability": 9.0,
+        "gtmReach": 6.0
+      },
+      "category": "b2b-micro-saas",
+      "buildDays": 6,
+      "revenuePotentialCAD": { "low": 600, "high": 3000 },
+      "briefPath": "briefs/plateau-freelancer-tax-reserve.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "grand-prix-hospitality-staff-pool",
+      "rank": 18,
+      "title": "Grand Prix Hospitality Staff Pool",
+      "tagline": "Pre-vetted part-time server pool for Montreal F1 weekend restaurant surge staffing.",
+      "score": 6.6,
+      "scoreBreakdown": {
+        "painEvidence": 7.0,
+        "montrealAnchor": 8.0,
+        "sevenDayShip": 7.0,
+        "cashPath": 5.0,
+        "soloSustainability": 6.0,
+        "gtmReach": 7.0
+      },
+      "category": "hospitality-tourism",
+      "buildDays": 7,
+      "revenuePotentialCAD": { "low": 1500, "high": 6000 },
+      "briefPath": "briefs/grand-prix-hospitality-staff-pool.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "mile-end-bilingual-invoice",
+      "rank": 19,
+      "title": "Mile End Bilingual Invoice Generator",
+      "tagline": "Bill 96-compliant FR-primary invoices for Quebec freelancers and creative SMBs.",
+      "score": 6.4,
+      "scoreBreakdown": {
+        "painEvidence": 6.0,
+        "montrealAnchor": 5.0,
+        "sevenDayShip": 8.0,
+        "cashPath": 5.0,
+        "soloSustainability": 9.0,
+        "gtmReach": 6.0
+      },
+      "category": "b2b-micro-saas",
+      "buildDays": 7,
+      "revenuePotentialCAD": { "low": 500, "high": 2500 },
+      "briefPath": "briefs/mile-end-bilingual-invoice.md",
+      "status": "hypothesis"
+    },
+    {
+      "id": "rbq-contractor-check",
+      "rank": 20,
+      "title": "RBQ Contractor Check + Booking",
+      "tagline": "Verify RBQ licence then book licensed Montreal renovators for spring season.",
+      "score": 6.3,
+      "scoreBreakdown": {
+        "painEvidence": 7.0,
+        "montrealAnchor": 6.0,
+        "sevenDayShip": 6.0,
+        "cashPath": 7.0,
+        "soloSustainability": 5.0,
+        "gtmReach": 6.0
+      },
+      "category": "local-services",
+      "buildDays": 7,
+      "revenuePotentialCAD": { "low": 1500, "high": 6000 },
+      "briefPath": "briefs/rbq-contractor-check.md",
+      "status": "hypothesis"
     }
-  },
-  "required": ["ideas"]
+  ]
 }
