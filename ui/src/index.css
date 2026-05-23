@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Instrument Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-surface: #0f1117;
+  --color-panel: #171a22;
+  --color-border: #2a2f3d;
+  --color-muted: #8b93a7;
+  --color-accent: #6ee7b7;
+  --color-accent-dim: #34d399;
+  --color-warn: #fbbf24;
+  --color-danger: #f87171;
+}
+
+body {
+  @apply bg-[var(--color-surface)] text-zinc-100 font-sans antialiased;
+}
+
+.markdown-body h1 {
+  @apply text-2xl font-semibold mb-4 text-white;
+}
+.markdown-body h2 {
+  @apply text-xl font-semibold mt-6 mb-3 text-zinc-100;
+}
+.markdown-body h3 {
+  @apply text-lg font-medium mt-4 mb-2 text-zinc-200;
+}
+.markdown-body p {
+  @apply mb-3 text-zinc-300 leading-relaxed;
+}
+.markdown-body ul,
+.markdown-body ol {
+  @apply mb-3 pl-5 text-zinc-300;
+}
+.markdown-body ul {
+  @apply list-disc;
+}
+.markdown-body ol {
+  @apply list-decimal;
+}
+.markdown-body li {
+  @apply mb-1;
+}
+.markdown-body a {
+  @apply text-[var(--color-accent)] underline underline-offset-2;
+}
+.markdown-body code {
+  @apply font-mono text-sm bg-zinc-800 px-1.5 py-0.5 rounded;
+}
+.markdown-body pre {
+  @apply bg-zinc-900 border border-[var(--color-border)] rounded-lg p-4 overflow-x-auto mb-4;
+}
+.markdown-body blockquote {
+  @apply border-l-4 border-[var(--color-accent-dim)] pl-4 italic text-zinc-400 my-4;
+}
+.markdown-body table {
+  @apply w-full border-collapse mb-4 text-sm;
+}
+.markdown-body th,
+.markdown-body td {
+  @apply border border-[var(--color-border)] px-3 py-2 text-left;
+}
+.markdown-body th {
+  @apply bg-zinc-800 font-medium;
+}

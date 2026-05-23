@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RankedIdeasIndex",
+  "description": "Placeholder schema — agents will replace this with their own design in Phase 1",
+  "type": "object",
+  "properties": {
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "frameworkVersion": { "type": "string" },
+    "ideas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "rank", "title", "tagline", "score"],
+        "properties": {
+          "id": { "type": "string" },
+          "rank": { "type": "integer", "minimum": 1 },
+          "title": { "type": "string" },
+          "tagline": { "type": "string" },
+          "score": { "type": "number" },
+          "scoreBreakdown": { "type": "object" },
+          "category": { "type": "string" },
+          "buildDays": { "type": "integer" },
+          "revenuePotentialCAD": {
+            "type": "object",
+            "properties": {
+              "low": { "type": "number" },
+              "high": { "type": "number" }
+            }
+          },
+          "briefPath": { "type": "string" },
+          "status": { "type": "string", "enum": ["ranked", "hypothesis", "verified"] }
+        }
+      }
+    }
+  },
+  "required": ["ideas"]
+}

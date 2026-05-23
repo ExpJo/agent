@@ -1,0 +1,27 @@
+{
+  "name": "mtl-idea-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Montreal startup idea research, evaluation, and discovery engine powered by Cursor SDK",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "pipeline": "tsx src/cli.ts",
+    "pipeline:framework": "tsx src/cli.ts framework",
+    "pipeline:collect": "tsx src/cli.ts collect",
+    "pipeline:rank": "tsx src/cli.ts rank",
+    "pipeline:all": "tsx src/cli.ts all",
+    "ui": "npm run dev --prefix ui",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@cursor/sdk": "^1.0.9"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}
