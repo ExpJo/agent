@@ -1,0 +1,126 @@
+{
+  "id": "snow-damage-claim-assistant",
+  "title": "Snow Damage Claim Assistant",
+  "tagline": "15-day claim tracker for Montreal property managers after snow removal damage.",
+  "category": "property-real-estate",
+  "jtbd": {
+    "situation": "When city snow removal damages condo parking lot curbs and landscaping",
+    "persona": "Property manager overseeing 12-building CDN portfolio",
+    "motivation": "document damage and file claims within 15-day city deadline",
+    "outcome": "recover repair costs from responsible snow contractor",
+    "statement": "When snow ops damage property, a CDN property manager wants claim documentation so they meet the 15-day deadline."
+  },
+  "montrealAngle": "Montreal 311 received 5000+ snow complaints Feb 2025; claims forwarded to contractors. Info-Neige GPS failures added tow risk.",
+  "whyNow": "Recurring winter pain; repair season starts after May 15 for lawn damage per city rules.",
+  "persona": {
+    "name": "Residential property manager, 5-20 buildings",
+    "borough": "CDN-NDG",
+    "language": "bilingual",
+    "estimatedCount": 300,
+    "countSource": "[hypothesis] Montreal property management firms"
+  },
+  "competitors": [
+    {
+      "name": "montreal.ca claim forms",
+      "url": "https://montreal.ca/en/topics/claims",
+      "montrealPresence": "strong",
+      "notes": "Manual PDF process; no portfolio tracking."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Photo-document damage, track 15-day deadline, generate claim package",
+    "mustHave": [
+      "Damage photo upload",
+      "15-day countdown per incident",
+      "Claim form pre-fill",
+      "Portfolio dashboard",
+      "FR/EN"
+    ],
+    "wontHave": [
+      "311 API integration",
+      "Legal representation"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase Storage",
+      "React-PDF"
+    ],
+    "buildDays": 6,
+    "conciergeFallback": "Manual claim prep for $149/incident"
+  },
+  "businessModel": {
+    "pricingCAD": "$49/mo portfolio or $149/incident",
+    "firstCustomer": "CDN property manager post-winter 2025",
+    "revenue60Day": {
+      "low": 1000,
+      "high": 4500
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "APCIQ member outreach [hypothesis]",
+      "Property mgmt LinkedIn",
+      "Nov-Mar seasonal marketing"
+    ],
+    "channels": [
+      "Direct sales",
+      "LinkedIn"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Managers pay to avoid missed 15-day deadline",
+      "confidence": "pain-verified",
+      "testMethod": "Interview 5 property managers after winter"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://montrealgazette.com/news/montreals-help-line-flooded-with-5000-complaints-over-snow-clearing",
+      "title": "Gazette 5000 snow complaints",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    },
+    {
+      "url": "https://montreal.ca/en/topics/claims",
+      "title": "Ville de Montréal claims",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "A",
+      "signalType": "regulatory"
+    },
+    {
+      "url": "https://montreal.ca/en/how-to/report-property-damage-caused-snow-removal-vehicle",
+      "title": "Snow damage reporting",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "A",
+      "signalType": "regulatory"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Montreal snow ops scale and 311 volume unique."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Upload + countdown + PDF = 6 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "10 incidents or 5 subscriptions."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Self-serve with seasonal spike."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Claim prep not legal advice."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

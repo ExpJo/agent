@@ -1,0 +1,134 @@
+{
+  "id": "juillet-premier-move-coordinator",
+  "title": "Juillet Premier Move Coordinator",
+  "tagline": "July 1 moving checklist + service booking for Montreal lease-change households.",
+  "category": "consumer",
+  "jtbd": {
+    "situation": "When 115000 Montrealers move July 1 amid 70% rent increases since 2019",
+    "persona": "Young couple moving from Plateau to Verdun on fixed budget",
+    "motivation": "coordinate truck, cleaners, and address changes in one timeline",
+    "outcome": "complete move without double-booking or missing TAL rent disclosure",
+    "statement": "When July 1 move day arrives, a Montreal couple wants a coordinated checklist so they move without chaos."
+  },
+  "montrealAngle": "Quebec unique July 1 moving day; 115K Montreal movers; 270+ households sought city help 2025; OMHM 607 reference requests by June 2025.",
+  "whyNow": "Annual cycle; 2025 rent crisis made moves harder; SARL active June 20-July 5.",
+  "persona": {
+    "name": "Renter household moving on July 1",
+    "borough": "Multiple",
+    "language": "bilingual",
+    "estimatedCount": 115000,
+    "countSource": "Montreal Gazette — city estimate 115K movers"
+  },
+  "competitors": [
+    {
+      "name": "U-Haul direct booking",
+      "montrealPresence": "strong",
+      "notes": "Truck only; no Quebec-specific checklist."
+    },
+    {
+      "name": "311 relocation help",
+      "url": "https://montreal.ca/",
+      "montrealPresence": "strong",
+      "notes": "Emergency only; not planning tool."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Personalized July 1 move timeline with affiliate service booking links",
+    "mustHave": [
+      "Move date countdown",
+      "QC-specific checklist (TAL, Hydro, etc.)",
+      "Cleaner/truck affiliate links",
+      "Stripe $14.99 guide",
+      "FR/EN"
+    ],
+    "wontHave": [
+      "Full marketplace dispatch",
+      "Housing search"
+    ],
+    "stack": [
+      "Next.js",
+      "Stripe",
+      "Resend"
+    ],
+    "buildDays": 5,
+    "conciergeFallback": "Notion template sold via Gumroad"
+  },
+  "businessModel": {
+    "pricingCAD": "$14.99 guide + affiliate revenue",
+    "firstCustomer": "Google ad 'déménagement 1er juillet Montréal' May traffic",
+    "revenue60Day": {
+      "low": 2000,
+      "high": 10000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "May-June Google/FB ads",
+      "r/montreal moving threads",
+      "OMHM-adjacent content SEO"
+    ],
+    "channels": [
+      "Paid search",
+      "Reddit",
+      "SEO"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": " Movers pay $15 for QC-specific planner",
+      "confidence": "pain-verified",
+      "testMethod": "Landing page test in May"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://montrealgazette.com/news/five-things-renters-should-know-before-they-move/",
+      "title": "Gazette July 1 moving guide",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "seasonal",
+      "quote": "115000 Montrealers move July 1."
+    },
+    {
+      "url": "https://www.cbc.ca/news/canada/montreal/quebec-moving-day-housing-1.7573206",
+      "title": "CBC moving day housing crisis",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    },
+    {
+      "url": "https://www.omhm.qc.ca/fr/actualites/operation-1er-juillet-les-demandes-augmentent",
+      "title": "OMHM Opération 1er juillet",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified",
+      "quote": "607 reference requests since Jan 2025."
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "July 1 moving day is Quebec-specific cultural anchor."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Static checklist + affiliates = 5 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "May-June traffic spike; 100+ sales at $15."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Fully automated."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "No brokerage licence for checklist product."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

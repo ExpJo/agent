@@ -1,0 +1,126 @@
+{
+  "id": "resto-shift-sms-board",
+  "title": "Resto Shift SMS Board",
+  "tagline": "Last-minute shift coverage via SMS for Montreal restaurants hit by labour shortages.",
+  "category": "b2b-micro-saas",
+  "jtbd": {
+    "situation": "When a cook calls in sick on a Grand Prix weekend shift",
+    "persona": "Manager at Old Port restaurant relying on TFW staff",
+    "motivation": "blast available shifts to trusted part-time pool via SMS",
+    "outcome": "stay open without cutting hours Fri-Sun",
+    "statement": "When staff call in sick, an Old Port manager wants SMS shift blasts so they keep weekend service open."
+  },
+  "montrealAngle": "ARQ warns restaurants may open Fri-Sun only due to 10% TFW cap; Kwizinn Old Port uses 20% TFW for stability.",
+  "whyNow": "Federal TFW cap + Quebec immigration cuts hitting Montreal hospitality Oct 2025.",
+  "persona": {
+    "name": "Restaurant manager, 20-60 seats, TFW-dependent",
+    "borough": "Ville-Marie",
+    "language": "bilingual",
+    "estimatedCount": 800,
+    "countSource": "[hypothesis] Montreal full-service restaurants"
+  },
+  "competitors": [
+    {
+      "name": "WhatsApp groups",
+      "montrealPresence": "strong",
+      "notes": "Free but chaotic; no audit trail or shift tracking."
+    },
+    {
+      "name": "7shifts",
+      "url": "https://www.7shifts.com/",
+      "montrealPresence": "weak",
+      "notes": "Full scheduling suite; overkill for 7-day MVP wedge."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Post open shift, notify staff pool via SMS, first-accept wins",
+    "mustHave": [
+      "Manager login",
+      "Staff phone list",
+      "SMS blast via Twilio",
+      "Shift accept link",
+      "FR/EN UI"
+    ],
+    "wontHave": [
+      "Full scheduling",
+      "Payroll",
+      "TFW compliance"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "Twilio",
+      "Stripe"
+    ],
+    "buildDays": 7,
+    "conciergeFallback": "Manager texts manually; product tracks acceptances in Airtable"
+  },
+  "businessModel": {
+    "pricingCAD": "$49/mo per location",
+    "firstCustomer": "Kwizinn or similar Old Port resto",
+    "revenue60Day": {
+      "low": 500,
+      "high": 2500
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "ARQ member outreach",
+      "Old Port restaurant walk-ins",
+      "PME MTL hospitality advisors"
+    ],
+    "channels": [
+      "ARQ",
+      "Direct sales"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Managers pay $49/mo vs WhatsApp chaos",
+      "confidence": "hypothesis",
+      "testMethod": "3-restaurant pilot during festival season"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://montreal.citynews.ca/2025/10/05/quebec-restaurants-immigration-worker-cap/",
+      "title": "CityNews TFW cap restaurants",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    },
+    {
+      "url": "https://montreal.citynews.ca/2025/10/02/temporary-workers-quebec-ottawa/",
+      "title": "CityNews ARQ brief on TFW",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Montreal hospitality labour crisis acute vs other cities."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "SMS + simple UI = 7 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "5-10 locations at $49/mo."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Low support; SMS automated."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "No employment agency licensing needed."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

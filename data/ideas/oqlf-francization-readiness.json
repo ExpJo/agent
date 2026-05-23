@@ -1,0 +1,128 @@
+{
+  "id": "oqlf-francization-readiness",
+  "title": "OQLF Francization Readiness Kit",
+  "tagline": "Self-assessment + action plan for Montreal employers hitting the 25-employee Bill 96 threshold.",
+  "category": "compliance-regtech",
+  "jtbd": {
+    "situation": "When approaching 25 employees and the June 2025 OQLF registration deadline",
+    "persona": "HR manager at a 30-person Saint-Laurent manufacturer",
+    "motivation": "assess francization gaps and generate a compliance action plan",
+    "outcome": "obtain an OQLF francization certificate without hiring a full-time compliance officer",
+    "statement": "When approaching 25 employees, a Saint-Laurent HR manager wants to assess francization gaps so they can obtain OQLF certification without a dedicated compliance hire."
+  },
+  "montrealAngle": "Montreal CMA holds ~50% of Quebec employer businesses; Bill 96 extended francization to 25-49 employee firms effective June 1, 2025.",
+  "whyNow": "Final Bill 96 business provisions took effect June 1, 2025; CFIB reports SMBs unprepared.",
+  "persona": {
+    "name": "30-employee Saint-Laurent manufacturer HR lead",
+    "borough": "Saint-Laurent",
+    "language": "bilingual",
+    "estimatedCount": 800,
+    "countSource": "[hypothesis] Montreal CMA employers with 25-49 staff"
+  },
+  "competitors": [
+    {
+      "name": "OQLF free resources",
+      "url": "https://www.oqlf.gouv.qc.ca/",
+      "montrealPresence": "strong",
+      "notes": "Free but not interactive workflow."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Complete francization self-assessment and export a prioritized action checklist PDF",
+    "mustHave": [
+      "FR/EN questionnaire",
+      "Gap score dashboard",
+      "PDF export",
+      "Stripe checkout",
+      "Email results"
+    ],
+    "wontHave": [
+      "OQLF filing integration",
+      "Legal advice",
+      "Employee LMS"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "Stripe",
+      "React-PDF"
+    ],
+    "buildDays": 7,
+    "conciergeFallback": "Google Form + manual Notion PDF"
+  },
+  "businessModel": {
+    "pricingCAD": "$149-299 one-time",
+    "firstCustomer": "PME MTL advisory client with 28 employees",
+    "revenue60Day": {
+      "low": 1500,
+      "high": 6000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "PME MTL workshops",
+      "LinkedIn HR Montréal ads",
+      "Accountant referrals"
+    ],
+    "channels": [
+      "PME MTL",
+      "LinkedIn"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "25-49 employee firms pay for structured prep",
+      "confidence": "hypothesis",
+      "testMethod": "5 HR interviews"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.cbc.ca/news/canada/montreal/bill-96-new-rules-french-signs-1.7549484",
+      "title": "CBC Bill 96 rules",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "regulatory"
+    },
+    {
+      "url": "https://educaloi.qc.ca/en/capsules/francization-rules-for-employers/",
+      "title": "Éducaloi francization",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "A",
+      "signalType": "regulatory"
+    },
+    {
+      "url": "https://www.cfib-fcei.ca/en/site/qc-law-14-bill-96",
+      "title": "CFIB Bill 96 guide",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Quebec rule; Montreal highest employer concentration."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Questionnaire + PDF = 7 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "$149 x 10 sales in 60 days."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Self-serve SaaS."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Checklist only, not legal advice."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

@@ -1,0 +1,120 @@
+{
+  "id": "resto-tfw-francization-kit",
+  "title": "Resto TFW Francization Kit",
+  "tagline": "French workplace onboarding templates for Montreal restaurants hiring temporary foreign workers.",
+  "category": "compliance-regtech",
+  "jtbd": {
+    "situation": "When ARQ asks Francisation Québec for restaurant-specific TFW workplace programs",
+    "persona": "Owner of Caribbean restaurant in Old Port with 20% TFW staff",
+    "motivation": "deploy French onboarding materials and track employee progress",
+    "outcome": "retain TFW staff while meeting francization expectations",
+    "statement": "When hiring TFW kitchen staff, an Old Port owner wants French onboarding kits so they retain workers and meet francization norms."
+  },
+  "montrealAngle": "ARQ brief explicitly calls for Francisation Québec workplace programs for restaurant TFWs; Old Port restaurants like Kwizinn depend on TFW stability.",
+  "whyNow": "Oct 2025 TFW cap crisis + ARQ francization ask in National Assembly brief.",
+  "persona": {
+    "name": "Restaurant owner with TFW hires",
+    "borough": "Ville-Marie",
+    "language": "bilingual",
+    "estimatedCount": 400,
+    "countSource": "[hypothesis] Montreal restaurants with TFW >10%"
+  },
+  "competitors": [
+    {
+      "name": "Francisation Québec",
+      "url": "https://www.quebec.ca/",
+      "montrealPresence": "strong",
+      "notes": "Generic programs; not restaurant-shift specific."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Download restaurant-role French phrase cards and onboarding checklists",
+    "mustHave": [
+      "Role-based FR phrase cards (PDF)",
+      "Onboarding checklist",
+      "Progress tracker",
+      "Stripe $79 kit",
+      "FR/EN manager UI"
+    ],
+    "wontHave": [
+      "Francisation Québec integration",
+      "Certified translation",
+      "HRIS"
+    ],
+    "stack": [
+      "Next.js",
+      "Stripe",
+      "React-PDF"
+    ],
+    "buildDays": 5,
+    "conciergeFallback": "PDF pack sold via Gumroad"
+  },
+  "businessModel": {
+    "pricingCAD": "$79 kit + $29/mo tracker",
+    "firstCustomer": "ARQ member restaurant Old Port",
+    "revenue60Day": {
+      "low": 1500,
+      "high": 5000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "ARQ direct outreach",
+      "Kwizinn-type owner intro",
+      "Immigration consultant partners"
+    ],
+    "channels": [
+      "ARQ",
+      "Partners"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Restaurants buy templated FR kits vs custom HR",
+      "confidence": "hypothesis",
+      "testMethod": "5 restaurant owner interviews"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://montreal.citynews.ca/2025/10/02/temporary-workers-quebec-ottawa/",
+      "title": "CityNews ARQ TFW francization ask",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "regulatory"
+    },
+    {
+      "url": "https://montreal.citynews.ca/2025/10/05/quebec-restaurants-immigration-worker-cap/",
+      "title": "CityNews Kwizinn TFW reliance",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Montreal restaurant TFW concentration + ARQ advocacy."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "PDF templates + tracker = 5 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "20-40 kit sales at $79."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Digital product low support."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Templates not certified legal/compliance docs."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

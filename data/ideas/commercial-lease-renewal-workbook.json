@@ -1,0 +1,118 @@
+{
+  "id": "commercial-lease-renewal-workbook",
+  "title": "Commercial Lease Renewal Workbook",
+  "tagline": "Self-serve renewal prep for Ville-Émard and Monk Blvd merchants facing rent spikes.",
+  "category": "property-real-estate",
+  "jtbd": {
+    "situation": "When commercial lease renewal arrives with no TAL protection",
+    "persona": "Monk Blvd retail owner facing speculation-driven increase",
+    "motivation": "document negotiation history and compare to neighborhood closures",
+    "outcome": "make informed stay/leave decision before lease expiry",
+    "statement": "When renewal arrives on Monk Blvd, a merchant wants a prep workbook so they negotiate from data not panic."
+  },
+  "montrealAngle": "CBC documented Ville-Émard commercial rent pressure parallel to Verdun; QS proposed commercial lease register — merchants need tools now regardless of legislation.",
+  "whyNow": "Station W closure ripple; borough mayors calling for entrepreneur support programs.",
+  "persona": {
+    "name": "Monk Blvd / Ville-Émard independent retailer",
+    "borough": "Le Sud-Ouest",
+    "language": "fr",
+    "estimatedCount": 120,
+    "countSource": "[hypothesis] SDC Monk merchant count"
+  },
+  "competitors": [
+    {
+      "name": "Commercial lawyers",
+      "montrealPresence": "strong",
+      "notes": "Expensive; used only after crisis."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Guided workbook: lease extraction, comp research, negotiation script",
+    "mustHave": [
+      "Lease key-date extractor (manual form)",
+      "Negotiation script templates FR",
+      "Decision matrix PDF",
+      "Stripe $49",
+      "Email course drip"
+    ],
+    "wontHave": [
+      "Legal review",
+      "Automated comp database"
+    ],
+    "stack": [
+      "Next.js",
+      "Stripe",
+      "Resend"
+    ],
+    "buildDays": 5,
+    "conciergeFallback": "PDF workbook sold directly"
+  },
+  "businessModel": {
+    "pricingCAD": "$49 workbook; $149 with 30-min review call",
+    "firstCustomer": "SDC Monk merchant referral",
+    "revenue60Day": {
+      "low": 800,
+      "high": 3500
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "SDC Monk",
+      "Verdun/Wellington cross-referral",
+      "QS commercial lease newsjacking"
+    ],
+    "channels": [
+      "SDC",
+      "Content marketing"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Merchants buy $49 workbook pre-renewal",
+      "confidence": "hypothesis",
+      "testMethod": "SDC lunch-and-learn pre-sell"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.cbc.ca/news/canada/montreal/ville-emard-commercial-rent-increases-1.7490193",
+      "title": "CBC Ville-Émard commercial rent",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    },
+    {
+      "url": "https://montrealgazette.com/news/verdun-station-w-closing-rent-hike/",
+      "title": "Gazette Station W rent reform calls",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Montreal commercial rent pain without TAL protection."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Workbook + email = 5 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "15-40 sales at $49."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Digital + optional call."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Not legal advice."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

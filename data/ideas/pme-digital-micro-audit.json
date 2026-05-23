@@ -1,0 +1,135 @@
+{
+  "id": "pme-digital-micro-audit",
+  "title": "PME Digital Micro-Audit",
+  "tagline": "Lightweight digital readiness report for Montreal SMBs — ESSOR-adjacent but sized for sub-$2.5M shops.",
+  "category": "b2b-micro-saas",
+  "jtbd": {
+    "situation": "When a 15-person Rosemont shop needs digital tools but can't afford Big-4 ESSOR diagnostic",
+    "persona": "Owner of family manufacturing shop in Rosemont",
+    "motivation": "identify 3 high-ROI digital fixes before hiring integrator",
+    "outcome": "justify PME MTL loan or consultant spend with structured report",
+    "statement": "When modernizing ops, a Rosemont shop owner wants a micro digital audit so they prioritize the right $5K investments."
+  },
+  "montrealAngle": "ESSOR 1B requires $2.5M revenue — excludes most Montreal SMBs (72% have <10 employees). PME MTL pushes digital transformation but lacks lightweight self-serve entry.",
+  "whyNow": "ESSOR Volet 1 open through Mar 2027 signals government priority; gap below revenue threshold.",
+  "persona": {
+    "name": "10-30 employee Montreal Island SMB owner",
+    "borough": "Rosemont-La Petite-Patrie",
+    "language": "fr",
+    "estimatedCount": 5000,
+    "countSource": "Statistique Québec — 72% employer firms have 1-9 employees; audit targets 10-30 subset"
+  },
+  "competitors": [
+    {
+      "name": "ESSOR-funded consultants",
+      "url": "https://www.investquebec.com/",
+      "montrealPresence": "strong",
+      "notes": "Requires $2.5M revenue; $10-20K engagements."
+    },
+    {
+      "name": "PME MTL free advisory",
+      "url": "https://pmemtl.com/en",
+      "montrealPresence": "strong",
+      "notes": "Free but human-scheduled; not instant."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "20-question diagnostic producing prioritized digital action PDF",
+    "mustHave": [
+      "Industry-tuned questionnaire FR",
+      "Priority matrix output",
+      "PME MTL resource links",
+      "Stripe $199 report",
+      "Optional Cal.com review"
+    ],
+    "wontHave": [
+      "ESSOR application filing",
+      "ERP implementation"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "React-PDF",
+      "Stripe",
+      "Cal.com"
+    ],
+    "buildDays": 7,
+    "conciergeFallback": "Manual report delivery via Notion"
+  },
+  "businessModel": {
+    "pricingCAD": "$199 self-serve; $499 with 1hr review",
+    "firstCustomer": "PME MTL Est-de-l'Île advisor referral",
+    "revenue60Day": {
+      "low": 2000,
+      "high": 8000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "PME MTL 6 centres",
+      "Mallette/eclaireur consultant overflow",
+      "LinkedIn FR PME ads"
+    ],
+    "channels": [
+      "PME MTL",
+      "Consultant partners"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Sub-ESSOR SMBs pay $199 for structured diagnostic",
+      "confidence": "hypothesis",
+      "testMethod": "PME MTL advisor validates with 5 clients"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://grantcompass.ca/grants/essor-program-component-1-grants",
+      "title": "ESSOR Component 1 eligibility",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "grant-tailwind",
+      "quote": "Requires $2.5M revenue for 1B/1C."
+    },
+    {
+      "url": "https://pmemtl.com/en",
+      "title": "PME MTL advisory mandate",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "A",
+      "signalType": "grant-tailwind"
+    },
+    {
+      "url": "https://statistique.quebec.ca/fr/document/nombre-entreprises-actives-quebec",
+      "title": "Statistique Québec active businesses",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "A",
+      "signalType": "pain-verified"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "ESSOR gap specifically hurts Montreal SMBs below revenue threshold."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Questionnaire + PDF = 7 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "10-20 reports at $199."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Optional review calls scoped."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Advisory not ESSOR-certified diagnostic."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

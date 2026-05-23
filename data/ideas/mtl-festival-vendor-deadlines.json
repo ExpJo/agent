@@ -1,0 +1,126 @@
+{
+  "id": "mtl-festival-vendor-deadlines",
+  "title": "MTL Festival Vendor Deadline Hub",
+  "tagline": "Permit and application calendar for Montreal pop-up vendors and food trucks.",
+  "category": "local-services",
+  "jtbd": {
+    "situation": "When Fierté Marché Arc-en-ciel application closes May 15 and tam-tams opens April 1",
+    "persona": "Mile End queer artisan selling at summer festivals",
+    "motivation": "track borough and festival vendor deadlines in one calendar",
+    "outcome": "secure pop-up spots without missing $600 SDC Village fees deadline",
+    "statement": "When festival season approaches, a Mile End artisan wants deadline tracking so they don't miss vendor applications."
+  },
+  "montrealAngle": "Montreal festival density (Fierté, tam-tams, Jazz, Grand Prix) with fragmented borough rules; tam-tams 40 spots first-come; Arc-en-ciel $600+tx.",
+  "whyNow": "Fierté 2026 recenters on Village Aug 7-10; Arc-en-ciel May 15 deadline; summer vendor season starting.",
+  "persona": {
+    "name": "2SLGBTQIA+ pop-up vendor / food truck operator",
+    "borough": "Le Plateau-Mont-Royal",
+    "language": "bilingual",
+    "estimatedCount": 500,
+    "countSource": "[hypothesis] Montreal seasonal pop-up vendors"
+  },
+  "competitors": [
+    {
+      "name": "Individual festival Airtable forms",
+      "montrealPresence": "strong",
+      "notes": "Fragmented; no unified calendar."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Curated festival deadline calendar with email alerts and requirement checklists",
+    "mustHave": [
+      "Festival deadline database",
+      "Email alerts",
+      "Per-event checklist",
+      "Stripe $19/season",
+      "FR/EN"
+    ],
+    "wontHave": [
+      "Application submission",
+      "Payment processing for festivals"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "Resend",
+      "Stripe"
+    ],
+    "buildDays": 5,
+    "conciergeFallback": "Google Calendar + newsletter for $19"
+  },
+  "businessModel": {
+    "pricingCAD": "$19-29/season subscription",
+    "firstCustomer": "Marché Arc-en-ciel applicant via M.A.D. Collectif network",
+    "revenue60Day": {
+      "low": 400,
+      "high": 2000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "Fierté vendor alumni",
+      "Tam-tams seller Facebook groups",
+      "Food truck FB open letter community"
+    ],
+    "channels": [
+      "Facebook",
+      "Festival networks"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Vendors pay $19 for deadline aggregation",
+      "confidence": "hypothesis",
+      "testMethod": "100-email waitlist from festival groups"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://airtable.com/apprLNxyVNxyMYIia/pagFrRDxr9SjMnYpV/form",
+      "title": "Marché Arc-en-ciel 2026 application",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "seasonal"
+    },
+    {
+      "url": "https://montreal.ca/en/applying-vendor-permit-sunday-tam-tams",
+      "title": "Tam-tams vendor permit",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "A",
+      "signalType": "regulatory"
+    },
+    {
+      "url": "https://www.fugues.com/2026/05/20/fierte-montreal-une-nouvelle-vision-plus-inclusive-et-recentree-sur-le-village/",
+      "title": "Fugues Fierté 2026 Village focus",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "seasonal"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Montreal festival/vendor permit fragmentation."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Curated calendar + email = 5 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "50-100 subs at $19."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Low-touch newsletter model."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Information aggregation only."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

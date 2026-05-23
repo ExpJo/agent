@@ -1,0 +1,127 @@
+{
+  "id": "str-summer-permit-navigator",
+  "title": "STR Summer Permit Navigator",
+  "tagline": "Montreal host permit prep for the June 10-Sept 10 legal rental window.",
+  "category": "compliance-regtech",
+  "jtbd": {
+    "situation": "When preparing to legally rent a Griffintown condo during summer STR window",
+    "persona": "Montreal condo owner wanting seasonal STR income",
+    "motivation": "assemble permit documents and avoid daily fines",
+    "outcome": "submit complete host permit before peak tourist season",
+    "statement": "When preparing a summer STR listing, a Griffintown owner wants a guided checklist to rent legally without fines."
+  },
+  "montrealAngle": "Montreal bylaw limits principal-residence STR to June 10-Sept 10; borough-specific bans apply.",
+  "whyNow": "Expanded inspector team; burden of proof on owners; summer 2026 window opens June 10.",
+  "persona": {
+    "name": "Griffintown condo owner, first-time host",
+    "borough": "Le Sud-Ouest",
+    "language": "bilingual",
+    "estimatedCount": 4000,
+    "countSource": "City ~4000 STR units per CBC"
+  },
+  "competitors": [
+    {
+      "name": "montreal.ca permit pages",
+      "url": "https://montreal.ca/en/how-to/rent-your-principal-residence-to-tourists",
+      "montrealPresence": "strong",
+      "notes": "Official but no reminders."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Eligibility quiz, document checklist, permit renewal reminders",
+    "mustHave": [
+      "Borough checker",
+      "Doc checklist",
+      "Calendar reminders",
+      "Stripe $49",
+      "FR/EN UI"
+    ],
+    "wontHave": [
+      "City API",
+      "Listing management"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "Resend",
+      "Stripe"
+    ],
+    "buildDays": 6,
+    "conciergeFallback": "Notion checklist + review call"
+  },
+  "businessModel": {
+    "pricingCAD": "$49-79/season",
+    "firstCustomer": "Plateau Facebook host group member",
+    "revenue60Day": {
+      "low": 2000,
+      "high": 8000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "r/montreal",
+      "Airbnb host FB groups",
+      "RE agent referrals"
+    ],
+    "channels": [
+      "Reddit",
+      "Facebook"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Hosts pay $49 to avoid fine risk",
+      "confidence": "pain-verified",
+      "testMethod": "Pre-sell before June 1"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.cbc.ca/news/canada/montreal/montreal-short-term-rental-rules-1.7555489",
+      "title": "CBC STR rules",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "regulatory"
+    },
+    {
+      "url": "https://montreal.ca/en/how-to/rent-your-principal-residence-to-tourists",
+      "title": "Ville de Montréal host permit",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "A",
+      "signalType": "regulatory"
+    },
+    {
+      "url": "https://thelogic.co/news/montreal-airbnb-crackdown-short-term-rentals/",
+      "title": "The Logic STR crackdown",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "regulatory"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Montreal bylaw windows and borough bans."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Quiz + checklist = 6 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "40-100 users at $49."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Email support only."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Info tool with disclaimer."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

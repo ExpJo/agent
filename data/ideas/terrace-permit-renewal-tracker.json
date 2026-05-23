@@ -1,0 +1,120 @@
+{
+  "id": "terrace-permit-renewal-tracker",
+  "title": "Terrace Permit Renewal Tracker",
+  "tagline": "Borough-specific café-terrasse permit deadlines for Montreal restaurants.",
+  "category": "compliance-regtech",
+  "jtbd": {
+    "situation": "When April 1 terrace renewal deadline approaches across different borough rules",
+    "persona": "Plateau restaurant owner operating public-property terrace",
+    "motivation": "track borough-specific renewal dates and document checklist",
+    "outcome": "open terrace on time for May-Oct revenue peak",
+    "statement": "When terrace season starts, a Plateau owner wants borough renewal reminders so they open on time."
+  },
+  "montrealAngle": "Montreal has 19 boroughs with different terrace periods (Apr 15-Nov 15 vs May 1-Oct 15); some ban public terraces entirely. Ville-Marie fees $545 analysis + $63 issuance.",
+  "whyNow": "Annual renewal cycle; terrace revenue critical post-staffing crisis; April-May prep window.",
+  "persona": {
+    "name": "Restaurant with public terrace, 30-80 seats",
+    "borough": "Plateau-Mont-Royal",
+    "language": "fr",
+    "estimatedCount": 600,
+    "countSource": "[hypothesis] Montreal restaurants with seasonal terraces"
+  },
+  "competitors": [
+    {
+      "name": "montreal.ca terrace pages",
+      "url": "https://montreal.ca/en/how-to/build-commercial-terrace-public-property",
+      "montrealPresence": "strong",
+      "notes": "Static info; no reminders or borough quiz."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Borough quiz + renewal checklist + email reminders",
+    "mustHave": [
+      "Borough rule lookup",
+      "Document checklist",
+      "Renewal date reminders",
+      "Stripe $39/season",
+      "French UI"
+    ],
+    "wontHave": [
+      "Permit submission API",
+      "Insurance broker integration"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "Resend",
+      "Stripe"
+    ],
+    "buildDays": 5,
+    "conciergeFallback": "Spreadsheet reminder service for $39"
+  },
+  "businessModel": {
+    "pricingCAD": "$39-59/season per terrace",
+    "firstCustomer": "Mile End terrasse owner via ARQ",
+    "revenue60Day": {
+      "low": 800,
+      "high": 4000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "ARQ members pre-April",
+      "SDC Plateau merchant email",
+      "Restaurant supplier co-marketing"
+    ],
+    "channels": [
+      "ARQ",
+      "SDC"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Owners pay $39 for deadline tracking",
+      "confidence": "hypothesis",
+      "testMethod": "Pre-sell in March"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://montreal.ca/en/how-to/build-commercial-terrace-public-property",
+      "title": "Ville de Montréal terrace rules",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "A",
+      "signalType": "regulatory"
+    },
+    {
+      "url": "https://montreal.ca/en/how-to/renew-permit-to-build-commercial-terrace-public-property",
+      "title": "Terrace renewal by borough",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "A",
+      "signalType": "regulatory"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "19-borough complexity is Montreal-specific."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Static borough data + reminders = 5 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "20-50 subscriptions at $39."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Automated emails."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Info service with disclaimer."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

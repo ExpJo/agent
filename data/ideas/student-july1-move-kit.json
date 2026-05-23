@@ -1,0 +1,131 @@
+{
+  "id": "student-july1-move-kit",
+  "title": "Student July 1 Move Kit",
+  "tagline": "McGill/Concordia student move-in checklist for Montreal lease transfers and borough rules.",
+  "category": "consumer",
+  "jtbd": {
+    "situation": "When international student arrives for September but sublet chain ends June 30",
+    "persona": "Concordia international student navigating July 1 sublet gap",
+    "motivation": "find short-term storage and understand lease transfer rules",
+    "outcome": "avoid homelessness between sublet and fall lease",
+    "statement": "When caught in July 1 housing gap, a Concordia student wants a move kit so they find storage and temp housing."
+  },
+  "montrealAngle": "McGill/Concordia drive fall demand; July 1 mass move + 1.8% vacancy; Parc-Extension tenants facing 16% rent hikes staying put.",
+  "whyNow": "May 2026 SARL campaign; student lease cycle peaks June-July.",
+  "persona": {
+    "name": "International or out-of-province student renter",
+    "borough": "CDN-NDG / Ville-Marie",
+    "language": "en",
+    "estimatedCount": 40000,
+    "countSource": "[hypothesis] McGill+Concordia enrollment with off-campus housing"
+  },
+  "competitors": [
+    {
+      "name": "University housing offices",
+      "montrealPresence": "strong",
+      "notes": "Fall-focused; weak on July 1 gap."
+    },
+    {
+      "name": "Québec.ca SARL",
+      "url": "https://www.quebec.ca/",
+      "montrealPresence": "strong",
+      "notes": "Emergency; not student-specific planner."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Student-specific July 1 timeline with storage/short-term rental links",
+    "mustHave": [
+      "Student move checklist EN/FR",
+      "Storage affiliate links",
+      "Borough parking permit notes",
+      "Stripe $9.99",
+      "WhatsApp share card"
+    ],
+    "wontHave": [
+      "Apartment search marketplace",
+      "Lease legal review"
+    ],
+    "stack": [
+      "Next.js",
+      "Stripe"
+    ],
+    "buildDays": 4,
+    "conciergeFallback": "PDF guide via Gumroad"
+  },
+  "businessModel": {
+    "pricingCAD": "$9.99 guide + affiliate revenue",
+    "firstCustomer": "Concordia student Facebook group ad",
+    "revenue60Day": {
+      "low": 500,
+      "high": 3000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "McGill/Concordia FB groups",
+      "International student orientation partners",
+      "June Google ads"
+    ],
+    "channels": [
+      "Facebook",
+      "Campus groups"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Students pay $10 for move survival guide",
+      "confidence": "hypothesis",
+      "testMethod": "Campus group free preview"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.cbc.ca/news/canada/montreal/quebec-moving-day-housing-1.7573206",
+      "title": "CBC moving day housing",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    },
+    {
+      "url": "https://montreal.citynews.ca/2025/07/01/quebecs-moving-day/",
+      "title": "CityNews Parc-Ex rent pressure",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified",
+      "quote": "Tenants staying due to 16% hikes."
+    },
+    {
+      "url": "https://www.newswire.ca/fr/news-releases/a-l-approche-du-1er-juillet-les-services-d-aide-a-la-recherche-de-logement-845732592.html",
+      "title": "SHQ SARL 2026 campaign",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "seasonal"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Quebec July 1 + Montreal student housing cluster."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Static guide = 4 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "May-July ad spike."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Fully automated."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Info product only."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

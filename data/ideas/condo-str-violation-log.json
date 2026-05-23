@@ -1,0 +1,131 @@
+{
+  "id": "condo-str-violation-log",
+  "title": "Condo STR Violation Log",
+  "tagline": "Track and document illegal STR listings for Montreal condo syndicates.",
+  "category": "property-real-estate",
+  "jtbd": {
+    "situation": "When tenants rent Roccabella units on Airbnb against co-ownership rules",
+    "persona": "Building operations director at downtown Montreal condo tower",
+    "motivation": "log violations and build evidence packages for syndicate legal action",
+    "outcome": "stop illegal STR and recover damages like the $53K Roccabella judgment",
+    "statement": "When tenants violate STR bans, a downtown condo director wants violation logs so they can pursue syndicate legal remedies."
+  },
+  "montrealAngle": "Roccabella syndicate won $53K+ from Airbnb tenants; Montreal STR bylaw + syndicate rules stack. Downtown towers (Ville-Marie, Plateau) highest STR pressure.",
+  "whyNow": "Summer STR window increases violations; city expanded inspectors; syndicates lack tooling.",
+  "persona": {
+    "name": "Condo building operations manager, 100+ units",
+    "borough": "Ville-Marie",
+    "language": "bilingual",
+    "estimatedCount": 200,
+    "countSource": "[hypothesis] large Montreal condos with STR bans"
+  },
+  "competitors": [
+    {
+      "name": "GardaWorld private investigators",
+      "montrealPresence": "strong",
+      "notes": "Roccabella paid for undercover ops; $$$ not scalable."
+    },
+    {
+      "name": "Spreadsheet + email",
+      "montrealPresence": "strong",
+      "notes": "Current workaround."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Log STR sightings, upload evidence, generate syndicate board report",
+    "mustHave": [
+      "Violation entry form",
+      "Photo/link attachment",
+      "Timeline export PDF",
+      "Resident anonymous tip form",
+      "FR/EN"
+    ],
+    "wontHave": [
+      "Undercover booking",
+      "Legal filing automation",
+      "Airbnb API"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "React-PDF"
+    ],
+    "buildDays": 6,
+    "conciergeFallback": "Notion template + manual PDF for syndicate"
+  },
+  "businessModel": {
+    "pricingCAD": "$99/mo per building or $999/yr",
+    "firstCustomer": "Condo admin firm managing 3+ towers [hypothesis]",
+    "revenue60Day": {
+      "low": 500,
+      "high": 3000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "Condo Stratégis blog readers",
+      "MC Finance-type admin firms",
+      "Roccabella-case press outreach"
+    ],
+    "channels": [
+      "Condo admin firms",
+      "Direct outreach"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Syndicates pay $99/mo vs hiring investigators",
+      "confidence": "hypothesis",
+      "testMethod": "3 syndicate manager interviews"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.montrealgazette.com/news/article227395.html",
+      "title": "Gazette Roccabella Airbnb judgment",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    },
+    {
+      "url": "https://condostrategis.ca/en/blogue/airbnb-condominium-montreal-short-term-rental-regulations-quebec-condominium-syndicate-rights-airbnb-impact-on-neighborhood-condominium-management-and-rental/",
+      "title": "Condo Stratégis STR regulations",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "regulatory"
+    },
+    {
+      "url": "https://thelogic.co/news/montreal-airbnb-crackdown-short-term-rentals/",
+      "title": "The Logic STR crackdown",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "regulatory"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Downtown Montreal condo STR conflict unique density."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "CRUD + PDF = 6 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "3-5 buildings at $99/mo."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Syndicate managers self-serve."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Evidence tool not legal services."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

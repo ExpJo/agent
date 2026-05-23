@@ -1,0 +1,133 @@
+{
+  "id": "plateau-freelancer-tax-reserve",
+  "title": "Plateau Freelancer Tax Reserve Calculator",
+  "tagline": "QST/GST and Revenu Québec instalment planner for Mile End creatives.",
+  "category": "b2b-micro-saas",
+  "jtbd": {
+    "situation": "When April 30 tax balance is due but return deadline is June 15",
+    "persona": "Mile End freelance designer with fluctuating income",
+    "motivation": "set aside correct QST/GST and provincial tax each month",
+    "outcome": "avoid shock tax bill and Revenu Québec penalties",
+    "statement": "When freelancing in Mile End, a designer wants monthly tax reserve calculations so they avoid April tax shock."
+  },
+  "montrealAngle": "Plateau/Mile End freelancer density; Quebec TP-80 filing + QST $30K threshold + April 30 balance vs June 15 filing unique to QC.",
+  "whyNow": "TVA Nouvelles May 2026 article on freelancer tax bill shock; electronic payment rules tightened 2024.",
+  "persona": {
+    "name": "Freelance creative/consultant, sole proprietor",
+    "borough": "Le Plateau-Mont-Royal",
+    "language": "bilingual",
+    "estimatedCount": 15000,
+    "countSource": "[hypothesis] Montreal self-employed per StatCan [verify]"
+  },
+  "competitors": [
+    {
+      "name": "Accountant annual filing",
+      "montrealPresence": "strong",
+      "notes": "$500-1500/yr; not monthly reserve tool."
+    },
+    {
+      "name": "Wave/QBO",
+      "montrealPresence": "strong",
+      "notes": "General accounting; weak QST instalment UX for solos."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Input monthly revenue/expenses, output QC tax reserve amount",
+    "mustHave": [
+      "Monthly revenue input",
+      "QST/GST threshold alert",
+      "Reserve recommendation",
+      "Email monthly reminder",
+      "FR UI"
+    ],
+    "wontHave": [
+      "TP-1 filing",
+      "Receipt OCR",
+      "Multi-entity"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "Resend",
+      "Stripe"
+    ],
+    "buildDays": 6,
+    "conciergeFallback": "Spreadsheet template sold for $29"
+  },
+  "businessModel": {
+    "pricingCAD": "$12/mo or $99/yr",
+    "firstCustomer": "Montreal Entrepreneurs Collective member",
+    "revenue60Day": {
+      "low": 600,
+      "high": 3000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "Meetup MEC",
+      "r/QuebecEntreprise",
+      "CPA referral for overflow clients"
+    ],
+    "channels": [
+      "Meetup",
+      "Reddit",
+      "CPA"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Freelancers pay $12/mo for reserve alerts",
+      "confidence": "hypothesis",
+      "testMethod": "Free Jan-Mar pilot, convert in April"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.tvanouvelles.ca/2026/05/14/facture-fiscale--un-gouffre-financier-pour-les-travailleurs-autonomes",
+      "title": "TVA Nouvelles freelancer tax shock",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    },
+    {
+      "url": "https://www.revenuquebec.ca/fr/citoyens/travailleurs-autonomes/particularites-du-travailleur-autonome/",
+      "title": "Revenu Québec travailleurs autonomes",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "A",
+      "signalType": "regulatory"
+    },
+    {
+      "url": "https://justepourtous.revenuquebec.ca/en/profiles/self-employed-workers",
+      "title": "Revenu Québec self-employed guide",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "A",
+      "signalType": "regulatory"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Quebec tax calendar unique; Mile End freelancer cluster."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Calculator + reminders = 6 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "50 subs at $12/mo by day 60."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Self-serve."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Not tax advice; disclaimer + CPA referral."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

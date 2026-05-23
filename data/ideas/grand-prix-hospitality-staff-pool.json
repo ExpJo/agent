@@ -1,0 +1,125 @@
+{
+  "id": "grand-prix-hospitality-staff-pool",
+  "title": "Grand Prix Hospitality Staff Pool",
+  "tagline": "Pre-vetted part-time server pool for Montreal F1 weekend restaurant surge staffing.",
+  "category": "hospitality-tourism",
+  "jtbd": {
+    "situation": "When Grand Prix weekend triples covers but TFW cap limits core staff",
+    "persona": "Manager at Crescent St bar facing F1 weekend rush",
+    "motivation": "access pre-screened bilingual servers for 4-day surge",
+    "outcome": "maximize F1 revenue without service collapse",
+    "statement": "When F1 weekend hits, a Crescent St manager wants a vetted server pool so they handle the surge."
+  },
+  "montrealAngle": "Grand Prix + Jazz Fest + terrace season stack June; Crescent/Latin Quarter F&B epicenter; staffing crisis makes seasonal surge acute.",
+  "whyNow": "F1 2026 June 5-7; restaurants already cutting weekday hours due to labour shortage.",
+  "persona": {
+    "name": "Bar-restaurant manager, tourist corridor",
+    "borough": "Ville-Marie",
+    "language": "bilingual",
+    "estimatedCount": 150,
+    "countSource": "[hypothesis] downtown tourist-corridor restaurants"
+  },
+  "competitors": [
+    {
+      "name": "Agence de placement hospitality",
+      "montrealPresence": "strong",
+      "notes": "15-25% markup; slow for 4-day surge."
+    },
+    {
+      "name": "Instagram hiring posts",
+      "montrealPresence": "strong",
+      "notes": "Ad hoc; no vetting."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Managers post F1 shifts; vetted pool accepts via SMS",
+    "mustHave": [
+      "Server profile signup",
+      "Manager shift post",
+      "SMS notify",
+      "Stripe placement fee",
+      "Bilingual profiles"
+    ],
+    "wontHave": [
+      "Full HR/payroll",
+      "Work permit verification automation"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "Twilio",
+      "Stripe"
+    ],
+    "buildDays": 7,
+    "conciergeFallback": "Manual spreadsheet matching for $50/placement"
+  },
+  "businessModel": {
+    "pricingCAD": "$50-75/placement or $299 F1 weekend package",
+    "firstCustomer": "Crescent St restaurant via ARQ",
+    "revenue60Day": {
+      "low": 1500,
+      "high": 6000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "ARQ pre-F1 outreach",
+      "Hospitality school job boards",
+      "Crescent St BIA [hypothesis]"
+    ],
+    "channels": [
+      "ARQ",
+      "Schools",
+      "Direct"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Managers pay premium for pre-vetted F1 staff",
+      "confidence": "hypothesis",
+      "testMethod": "5 manager pre-commitments by May 15"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://montreal.citynews.ca/2025/10/05/quebec-restaurants-immigration-worker-cap/",
+      "title": "CityNews restaurant labour crisis",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    },
+    {
+      "url": "https://www.newswire.ca/news-releases/more-than-17-000-international-business-tourists-expected-at-the-palais-des-congres-de-montreal-this-summer-803199751.html",
+      "title": "Newswire summer tourism surge",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "seasonal"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Montreal June event stacking unique; Crescent corridor specific."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Signup + SMS matching = 7 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "20-40 placements at $50+."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Seasonal burst; concierge OK."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Not employment agency — intro platform with disclaimer [verify RBQ/normes travail]."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

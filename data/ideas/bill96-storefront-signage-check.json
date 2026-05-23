@@ -1,0 +1,124 @@
+{
+  "id": "bill96-storefront-signage-check",
+  "title": "Bill 96 Storefront Signage Checker",
+  "tagline": "Photo audit tool for French predominant signage on Montreal retail storefronts.",
+  "category": "compliance-regtech",
+  "jtbd": {
+    "situation": "When Bill 96 requires French markedly predominant on public signs from June 2025",
+    "persona": "Owner of bilingual boutique on Sainte-Catherine in the Village",
+    "motivation": "audit storefront signage before OQLF inspection",
+    "outcome": "avoid $3000-30000/day fines",
+    "statement": "When Bill 96 signage rules apply, a Village boutique owner wants a photo audit so they fix signs before fines."
+  },
+  "montrealAngle": "Montreal retail corridors (Ste-Catherine, Mont-Royal) mix EN-heavy branding with Bill 96 predominant French rule; CBC documented business group panic.",
+  "whyNow": "Rules effective June 1 2025; packaging/signage compliance still catching up May 2026.",
+  "persona": {
+    "name": "Independent retailer, 1-3 locations",
+    "borough": "Ville-Marie",
+    "language": "bilingual",
+    "estimatedCount": 2000,
+    "countSource": "[hypothesis] Montreal retail SMBs with EN branding"
+  },
+  "competitors": [
+    {
+      "name": "Signage fabricators",
+      "montrealPresence": "strong",
+      "notes": "Sell new signs; no audit SaaS."
+    },
+    {
+      "name": "OQLF guidance PDFs",
+      "montrealPresence": "strong",
+      "notes": "Free; not interactive."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Upload storefront photo, get checklist of Bill 96 signage fixes",
+    "mustHave": [
+      "Photo upload",
+      "Rule-based checklist (not AI legal)",
+      "Fix recommendations",
+      "PDF report",
+      "Stripe $59"
+    ],
+    "wontHave": [
+      "Automated OQLF compliance certification",
+      "Sign design service"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase Storage",
+      "Stripe"
+    ],
+    "buildDays": 6,
+    "conciergeFallback": "Manual photo review for $59"
+  },
+  "businessModel": {
+    "pricingCAD": "$59/audit; $149/3 locations",
+    "firstCustomer": "SDC Village merchant",
+    "revenue60Day": {
+      "low": 1200,
+      "high": 5000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "SDC du Village outreach",
+      "Mont-Royal Ave merchant walk",
+      "Signage company referral fees"
+    ],
+    "channels": [
+      "SDC",
+      "Walk-in sales"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Retailers pay $59 for signage audit",
+      "confidence": "hypothesis",
+      "testMethod": "10 SDC merchant conversations"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.cbc.ca/news/canada/montreal/bill-96-new-rules-french-signs-1.7549484",
+      "title": "CBC Bill 96 signage rules",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "regulatory",
+      "quote": "Fines $3000-30000/day."
+    },
+    {
+      "url": "https://www.cfib-fcei.ca/en/site/qc-law-14-bill-96",
+      "title": "CFIB Bill 96 business impact",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Montreal retail EN/French signage tension acute."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Upload + checklist = 6 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "20-40 audits at $59."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Manual review initially."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Audit guidance not legal certification."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

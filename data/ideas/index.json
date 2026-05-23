@@ -1,0 +1,169 @@
+{
+  "generatedAt": "2026-05-23T20:22:10Z",
+  "frameworkVersion": "1.0.0",
+  "phase": "collection",
+  "methodologySummary": "Phase 2 collection via MOVS framework playbook — Pass A/B/C discovery, JTBD crystallization, light validation. Not ranked.",
+  "totalCollected": 20,
+  "ideas": [
+    {
+      "id": "bill96-storefront-signage-check",
+      "title": "Bill 96 Storefront Signage Checker",
+      "file": "ideas/bill96-storefront-signage-check.json",
+      "category": "compliance-regtech",
+      "status": "collected",
+      "tagline": "Photo audit tool for French predominant signage on Montreal retail storefronts."
+    },
+    {
+      "id": "commercial-lease-renewal-workbook",
+      "title": "Commercial Lease Renewal Workbook",
+      "file": "ideas/commercial-lease-renewal-workbook.json",
+      "category": "property-real-estate",
+      "status": "collected",
+      "tagline": "Self-serve renewal prep for Ville-Émard and Monk Blvd merchants facing rent spikes."
+    },
+    {
+      "id": "condo-str-violation-log",
+      "title": "Condo STR Violation Log",
+      "file": "ideas/condo-str-violation-log.json",
+      "category": "property-real-estate",
+      "status": "collected",
+      "tagline": "Track and document illegal STR listings for Montreal condo syndicates."
+    },
+    {
+      "id": "grand-prix-hospitality-staff-pool",
+      "title": "Grand Prix Hospitality Staff Pool",
+      "file": "ideas/grand-prix-hospitality-staff-pool.json",
+      "category": "hospitality-tourism",
+      "status": "collected",
+      "tagline": "Pre-vetted part-time server pool for Montreal F1 weekend restaurant surge staffing."
+    },
+    {
+      "id": "juillet-premier-move-coordinator",
+      "title": "Juillet Premier Move Coordinator",
+      "file": "ideas/juillet-premier-move-coordinator.json",
+      "category": "consumer",
+      "status": "collected",
+      "tagline": "July 1 moving checklist + service booking for Montreal lease-change households."
+    },
+    {
+      "id": "mile-end-bilingual-invoice",
+      "title": "Mile End Bilingual Invoice Generator",
+      "file": "ideas/mile-end-bilingual-invoice.json",
+      "category": "b2b-micro-saas",
+      "status": "collected",
+      "tagline": "Bill 96-compliant FR-primary invoices for Quebec freelancers and creative SMBs."
+    },
+    {
+      "id": "mtl-festival-vendor-deadlines",
+      "title": "MTL Festival Vendor Deadline Hub",
+      "file": "ideas/mtl-festival-vendor-deadlines.json",
+      "category": "local-services",
+      "status": "collected",
+      "tagline": "Permit and application calendar for Montreal pop-up vendors and food trucks."
+    },
+    {
+      "id": "mtl-tipping-compliance-scanner",
+      "title": "MTL Tipping Compliance Scanner",
+      "file": "ideas/mtl-tipping-compliance-scanner.json",
+      "category": "compliance-regtech",
+      "status": "collected",
+      "tagline": "Audit POS tipping for Quebec pre-tax rule — built for Montreal restaurants."
+    },
+    {
+      "id": "oqlf-francization-readiness",
+      "title": "OQLF Francization Readiness Kit",
+      "file": "ideas/oqlf-francization-readiness.json",
+      "category": "compliance-regtech",
+      "status": "collected",
+      "tagline": "Self-assessment + action plan for Montreal employers hitting the 25-employee Bill 96 threshold."
+    },
+    {
+      "id": "palais-congress-restaurant-pulse",
+      "title": "Palais des Congrès Restaurant Pulse",
+      "file": "ideas/palais-congress-restaurant-pulse.json",
+      "category": "hospitality-tourism",
+      "status": "collected",
+      "tagline": "Convention-week demand forecasts for downtown Montreal restaurants."
+    },
+    {
+      "id": "plateau-freelancer-tax-reserve",
+      "title": "Plateau Freelancer Tax Reserve Calculator",
+      "file": "ideas/plateau-freelancer-tax-reserve.json",
+      "category": "b2b-micro-saas",
+      "status": "collected",
+      "tagline": "QST/GST and Revenu Québec instalment planner for Mile End creatives."
+    },
+    {
+      "id": "pme-digital-micro-audit",
+      "title": "PME Digital Micro-Audit",
+      "file": "ideas/pme-digital-micro-audit.json",
+      "category": "b2b-micro-saas",
+      "status": "collected",
+      "tagline": "Lightweight digital readiness report for Montreal SMBs — ESSOR-adjacent but sized for sub-$2.5M shops."
+    },
+    {
+      "id": "rbq-contractor-check",
+      "title": "RBQ Contractor Check + Booking",
+      "file": "ideas/rbq-contractor-check.json",
+      "category": "local-services",
+      "status": "collected",
+      "tagline": "Verify RBQ licence then book licensed Montreal renovators for spring season."
+    },
+    {
+      "id": "resto-shift-sms-board",
+      "title": "Resto Shift SMS Board",
+      "file": "ideas/resto-shift-sms-board.json",
+      "category": "b2b-micro-saas",
+      "status": "collected",
+      "tagline": "Last-minute shift coverage via SMS for Montreal restaurants hit by labour shortages."
+    },
+    {
+      "id": "resto-tfw-francization-kit",
+      "title": "Resto TFW Francization Kit",
+      "file": "ideas/resto-tfw-francization-kit.json",
+      "category": "compliance-regtech",
+      "status": "collected",
+      "tagline": "French workplace onboarding templates for Montreal restaurants hiring temporary foreign workers."
+    },
+    {
+      "id": "sdc-wellington-lease-prep",
+      "title": "SDC Wellington Lease Renewal Prep",
+      "file": "ideas/sdc-wellington-lease-prep.json",
+      "category": "property-real-estate",
+      "status": "collected",
+      "tagline": "Rent comps and negotiation prep for Verdun merchants facing commercial lease renewal."
+    },
+    {
+      "id": "snow-damage-claim-assistant",
+      "title": "Snow Damage Claim Assistant",
+      "file": "ideas/snow-damage-claim-assistant.json",
+      "category": "property-real-estate",
+      "status": "collected",
+      "tagline": "15-day claim tracker for Montreal property managers after snow removal damage."
+    },
+    {
+      "id": "str-summer-permit-navigator",
+      "title": "STR Summer Permit Navigator",
+      "file": "ideas/str-summer-permit-navigator.json",
+      "category": "compliance-regtech",
+      "status": "collected",
+      "tagline": "Montreal host permit prep for the June 10-Sept 10 legal rental window."
+    },
+    {
+      "id": "student-july1-move-kit",
+      "title": "Student July 1 Move Kit",
+      "file": "ideas/student-july1-move-kit.json",
+      "category": "consumer",
+      "status": "collected",
+      "tagline": "McGill/Concordia student move-in checklist for Montreal lease transfers and borough rules."
+    },
+    {
+      "id": "terrace-permit-renewal-tracker",
+      "title": "Terrace Permit Renewal Tracker",
+      "file": "ideas/terrace-permit-renewal-tracker.json",
+      "category": "compliance-regtech",
+      "status": "collected",
+      "tagline": "Borough-specific café-terrasse permit deadlines for Montreal restaurants."
+    }
+  ]
+}

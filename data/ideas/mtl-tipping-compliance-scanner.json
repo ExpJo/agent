@@ -1,0 +1,118 @@
+{
+  "id": "mtl-tipping-compliance-scanner",
+  "title": "MTL Tipping Compliance Scanner",
+  "tagline": "Audit POS tipping for Quebec pre-tax rule — built for Montreal restaurants.",
+  "category": "compliance-regtech",
+  "jtbd": {
+    "situation": "When OPC finds 179 of 185 inspected restaurants non-compliant",
+    "persona": "Saint-Henri bar-restaurant owner with legacy POS",
+    "motivation": "verify tipping prompts use pre-tax amounts",
+    "outcome": "pass inspection before OPC fines",
+    "statement": "When OPC tipping inspections intensify, a Saint-Henri owner wants to audit POS tipping so they comply before being fined."
+  },
+  "montrealAngle": "531 OPC complaints since May 2025; Le Saint-Bock owner publicly compliant; ARQ notes POS vendor delays.",
+  "whyNow": "Rule effective May 7 2025; 97% non-compliance among inspected businesses through Feb 2026.",
+  "persona": {
+    "name": "Independent bar-restaurant owner",
+    "borough": "Le Sud-Ouest",
+    "language": "fr",
+    "estimatedCount": 3500,
+    "countSource": "[hypothesis] Montreal metro restaurant count"
+  },
+  "competitors": [
+    {
+      "name": "POS vendor updates",
+      "montrealPresence": "strong",
+      "notes": "Free but slow; some need new terminals."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Self-audit checklist + receipt photo review for pre-tax compliance",
+    "mustHave": [
+      "POS vendor fix guides",
+      "Receipt photo upload",
+      "Compliance PDF",
+      "Stripe $79",
+      "French UI"
+    ],
+    "wontHave": [
+      "POS integration",
+      "Terminal sales"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase Storage",
+      "Stripe"
+    ],
+    "buildDays": 5,
+    "conciergeFallback": "Manual receipt review via email"
+  },
+  "businessModel": {
+    "pricingCAD": "$79/audit; $199/yr monitoring",
+    "firstCustomer": "ARQ member post-inspection",
+    "revenue60Day": {
+      "low": 2000,
+      "high": 8000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "ARQ newsletter",
+      "POS resellers",
+      "Restaurant FB groups"
+    ],
+    "channels": [
+      "ARQ",
+      "POS partners"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Owners pay $79 vs waiting for OPC",
+      "confidence": "pain-verified",
+      "testMethod": "Pre-sell to 5 restaurants"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://montreal.citynews.ca/2026/05/01/montrealers-businesses-follow-new-tipping-rules/",
+      "title": "CityNews 531 OPC complaints",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "regulatory"
+    },
+    {
+      "url": "https://montreal.citynews.ca/2025/05/06/new-quebec-tipping-rules-start-may-7/",
+      "title": "CityNews tipping rules May 7",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "regulatory"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Montreal restaurant density + OPC volume."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Checklist + upload = 5 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "25 x $79 in 60 days."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "10 min manual review/audit."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Guidance not legal advice."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

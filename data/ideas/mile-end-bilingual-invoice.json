@@ -1,0 +1,125 @@
+{
+  "id": "mile-end-bilingual-invoice",
+  "title": "Mile End Bilingual Invoice Generator",
+  "tagline": "Bill 96-compliant FR-primary invoices for Quebec freelancers and creative SMBs.",
+  "category": "b2b-micro-saas",
+  "jtbd": {
+    "situation": "When invoicing Quebec clients requires French at equal or greater prominence",
+    "persona": "Mile End freelance videographer billing local agencies",
+    "motivation": "generate compliant bilingual invoices with QST/GST lines",
+    "outcome": "get paid faster without accountant invoice fixes",
+    "statement": "When billing Quebec clients, a Mile End freelancer wants FR-primary invoices so they comply with Bill 96 contract rules."
+  },
+  "montrealAngle": "Mile End creative freelancer cluster; Bill 96 consumer contract French requirement; many use English-only Stripe invoices.",
+  "whyNow": "Bill 96 contract/warranty French rules in effect; freelancers already struggling with TP-80 complexity.",
+  "persona": {
+    "name": "Creative freelancer or 1-5 person studio",
+    "borough": "Le Plateau-Mont-Royal",
+    "language": "bilingual",
+    "estimatedCount": 8000,
+    "countSource": "[hypothesis] Montreal creative self-employed"
+  },
+  "competitors": [
+    {
+      "name": "QuickBooks/Wave",
+      "montrealPresence": "strong",
+      "notes": "Generic; Bill 96 French prominence not default."
+    },
+    {
+      "name": "Accountant-drafted templates",
+      "montrealPresence": "strong",
+      "notes": "One-time; not SaaS."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Create and email PDF invoice with French-primary layout and QST/GST",
+    "mustHave": [
+      "FR-primary invoice template",
+      "QST/GST line items",
+      "Client database",
+      "PDF email send",
+      "Stripe $15/mo"
+    ],
+    "wontHave": [
+      "Full accounting",
+      "Bank sync",
+      "Multi-currency"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "React-PDF",
+      "Stripe"
+    ],
+    "buildDays": 7,
+    "conciergeFallback": "Notion + PDF template for $29 one-time"
+  },
+  "businessModel": {
+    "pricingCAD": "$15/mo or $149/yr",
+    "firstCustomer": "Mile End coworking bulletin board",
+    "revenue60Day": {
+      "low": 500,
+      "high": 2500
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "Notman House board",
+      "MEC meetup",
+      "Creative agency referrals"
+    ],
+    "channels": [
+      "Coworking",
+      "Meetup"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Creatives switch from Word templates for $15/mo",
+      "confidence": "hypothesis",
+      "testMethod": "Free trial with 20 Mile End freelancers"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://educaloi.qc.ca/en/capsules/francization-rules-for-employers/",
+      "title": "Éducaloi Bill 96 consumer contracts",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "A",
+      "signalType": "regulatory"
+    },
+    {
+      "url": "https://www.cbc.ca/news/canada/montreal/bill-96-new-rules-french-signs-1.7549484",
+      "title": "CBC Bill 96 business rules",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "regulatory"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Montreal creative economy + Bill 96 contract rules."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Invoice CRUD + PDF = 7 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "30-50 subs at $15/mo."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Self-serve SaaS."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Not accounting/tax advice."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

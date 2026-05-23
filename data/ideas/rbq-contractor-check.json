@@ -1,0 +1,134 @@
+{
+  "id": "rbq-contractor-check",
+  "title": "RBQ Contractor Check + Booking",
+  "tagline": "Verify RBQ licence then book licensed Montreal renovators for spring season.",
+  "category": "local-services",
+  "jtbd": {
+    "situation": "When hiring a contractor for spring renovation after residential strike delays",
+    "persona": "Rosemont homeowner burned by unlicensed Kijiji contractor",
+    "motivation": "verify RBQ licence and book vetted contractor with deposit",
+    "outcome": "complete renovation with financial guarantee protection",
+    "statement": "When hiring a spring renovator, a Rosemont homeowner wants RBQ verification and booking so they avoid unlicensed contractors."
+  },
+  "montrealAngle": "RBQ registry is public but UX-poor; CCQ forecasts 16K worker shortage 2025-29; Montreal key region. Residential strike May 2025 increased homeowner anxiety.",
+  "whyNow": "Spring construction season + RBQ processing delays (regular apps from Feb 2026 per RBQ site).",
+  "persona": {
+    "name": "Montreal Island homeowner, $5-30K renovation",
+    "borough": "Rosemont-La Petite-Patrie",
+    "language": "fr",
+    "estimatedCount": 50000,
+    "countSource": "[hypothesis] Montreal Island homeowners doing annual renovations"
+  },
+  "competitors": [
+    {
+      "name": "RBQ licence registry",
+      "url": "https://www.rbq.gouv.qc.ca/vous-etes/citoyen/verifier-la-licence-dun-entrepreneur/",
+      "montrealPresence": "strong",
+      "notes": "Lookup only; no booking."
+    },
+    {
+      "name": "Aidiway",
+      "url": "https://www.aidiway.com/",
+      "montrealPresence": "weak",
+      "notes": "Broad home services; RBQ verification not core wedge."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Lookup RBQ licence number and request quote from pre-vetted contractors",
+    "mustHave": [
+      "RBQ number lookup embed",
+      "Quote request form",
+      "Contractor onboarding (5 pilots)",
+      "Stripe deposit hold",
+      "FR UI"
+    ],
+    "wontHave": [
+      "Dispatch algorithm",
+      "Contractor mobile app",
+      "Full marketplace"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "Stripe",
+      "Cal.com"
+    ],
+    "buildDays": 7,
+    "conciergeFallback": "Manual RBQ check + email intro to contractor"
+  },
+  "businessModel": {
+    "pricingCAD": "$29 lead fee to contractor or 5% deposit",
+    "firstCustomer": "Renovco-type contractor partner [hypothesis]",
+    "revenue60Day": {
+      "low": 1500,
+      "high": 6000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "Rosemont Facebook groups",
+      "Salon National Habitation follow-up",
+      "RBQ-licensed contractor partnerships"
+    ],
+    "channels": [
+      "Facebook",
+      "Contractor partners"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Homeowners pay/trust RBQ-verified booking wedge",
+      "confidence": "hypothesis",
+      "testMethod": "10 homeowner interviews + 3 contractor LOIs"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.rbq.gouv.qc.ca/vous-etes/citoyen/verifier-la-licence-dun-entrepreneur/",
+      "title": "RBQ licence verification",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "A",
+      "signalType": "regulatory"
+    },
+    {
+      "url": "https://montreal.citynews.ca/2025/06/25/ccq-quebec-construction-workers/",
+      "title": "CCQ 16000 workers needed",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    },
+    {
+      "url": "https://www.cbc.ca/news/canada/montreal/construction-strike-residential-1.7545644",
+      "title": "CBC residential construction strike",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "seasonal"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "RBQ is Quebec-wide but Montreal renovation volume highest."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Lookup + form + 5 contractors = 7 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "20 leads at $29-75 fee."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Concierge matching early."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Contractors must hold RBQ licence; platform doesn't perform work."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

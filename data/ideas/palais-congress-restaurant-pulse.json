@@ -1,0 +1,127 @@
+{
+  "id": "palais-congress-restaurant-pulse",
+  "title": "Palais des Congrès Restaurant Pulse",
+  "tagline": "Convention-week demand forecasts for downtown Montreal restaurants.",
+  "category": "hospitality-tourism",
+  "jtbd": {
+    "situation": "When a 6000-delegate conference books the Palais des congrès",
+    "persona": "Operations manager at a René-Lévesque restaurant",
+    "motivation": "staff and inventory for delegate surges",
+    "outcome": "capture convention spillover revenue without over-staffing",
+    "statement": "When a major Palais convention arrives, a downtown restaurant manager wants delegate forecasts so they can staff correctly."
+  },
+  "montrealAngle": "Palais hosted 281 events in 2025 ($277M spinoffs); 17K+ summer delegates. Downtown F&B depends on convention calendar.",
+  "whyNow": "2026 events include Salon international alimentation (20K), ASHG (6K), Goldschmidt (4.5K).",
+  "persona": {
+    "name": "Downtown restaurant ops manager",
+    "borough": "Ville-Marie",
+    "language": "bilingual",
+    "estimatedCount": 400,
+    "countSource": "[hypothesis] restaurants within 1km of Palais"
+  },
+  "competitors": [
+    {
+      "name": "Tourisme Montréal calendar",
+      "montrealPresence": "strong",
+      "notes": "Macro only; no staffing recommendations."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Weekly convention impact email digest with staffing tips",
+    "mustHave": [
+      "Public event calendar feed",
+      "Delegate estimates",
+      "FR/EN email digest",
+      "Stripe $29/mo",
+      "Impact score"
+    ],
+    "wontHave": [
+      "POS integration",
+      "Hotel PMS",
+      "Real-time reservations"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "Resend",
+      "Stripe"
+    ],
+    "buildDays": 7,
+    "conciergeFallback": "Manual weekly email to 5 pilots"
+  },
+  "businessModel": {
+    "pricingCAD": "$29-49/mo per location",
+    "firstCustomer": "Palais-adjacent restaurant via ARQ",
+    "revenue60Day": {
+      "low": 500,
+      "high": 3000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "ARQ downtown members",
+      "Hotel F&B referrals",
+      "May-Sept convention outreach"
+    ],
+    "channels": [
+      "ARQ",
+      "Email"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Restaurants pay $29/mo for convention intel",
+      "confidence": "hypothesis",
+      "testMethod": "4-week free pilot"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.newswire.ca/news-releases/business-tourism-2025-a-remarkable-performance-for-montreal-and-quebec-884981338.html",
+      "title": "Newswire business tourism 2025",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "seasonal"
+    },
+    {
+      "url": "https://www.newswire.ca/news-releases/more-than-17-000-international-business-tourists-expected-at-the-palais-des-congres-de-montreal-this-summer-803199751.html",
+      "title": "Newswire 17K summer delegates",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "seasonal"
+    },
+    {
+      "url": "https://montreal.citynews.ca/2025/10/05/quebec-restaurants-immigration-worker-cap/",
+      "title": "CityNews restaurant staffing",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Palais uniquely Montreal convention hub."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Calendar + email = 7 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "10 x $29/mo by day 60."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Automated digest."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Public data only."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}

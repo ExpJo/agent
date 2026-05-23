@@ -1,0 +1,127 @@
+{
+  "id": "sdc-wellington-lease-prep",
+  "title": "SDC Wellington Lease Renewal Prep",
+  "tagline": "Rent comps and negotiation prep for Verdun merchants facing commercial lease renewal.",
+  "category": "property-real-estate",
+  "jtbd": {
+    "situation": "When a commercial lease renewal arrives with a proposed 60% rent hike",
+    "persona": "Independent café owner on Wellington Street, Verdun",
+    "motivation": "benchmark rent against corridor peers and prepare negotiation talking points",
+    "outcome": "negotiate a survivable lease or decide to relocate before signing",
+    "statement": "When facing a Wellington St lease renewal, a Verdun café owner wants corridor rent benchmarks so they can negotiate without a commercial lawyer."
+  },
+  "montrealAngle": "Station W closure (May 2026) renewed calls for commercial lease reform; SDC Wellington cited the case. Quebec has no commercial rent tribunal.",
+  "whyNow": "High-profile Verdun closure May 2026; Québec Solidaire pushing commercial lease register.",
+  "persona": {
+    "name": "SDC Wellington independent merchant",
+    "borough": "Verdun",
+    "language": "bilingual",
+    "estimatedCount": 150,
+    "countSource": "[hypothesis] SDC Wellington merchant count"
+  },
+  "competitors": [
+    {
+      "name": "Commercial lawyer",
+      "montrealPresence": "strong",
+      "notes": "$300-500/hr; no self-serve Verdun benchmark tool."
+    }
+  ],
+  "mvpScope": {
+    "coreJob": "Collect anonymous rent comps and generate renewal negotiation brief",
+    "mustHave": [
+      "Rent comp submission form",
+      "Corridor median dashboard",
+      "Renewal reminders",
+      "PDF brief export",
+      "French-primary UI"
+    ],
+    "wontHave": [
+      "Legal representation",
+      "Lease OCR",
+      "Provincial register API"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "React-PDF"
+    ],
+    "buildDays": 7,
+    "conciergeFallback": "Manual comp research + PDF for $199"
+  },
+  "businessModel": {
+    "pricingCAD": "$99-199 per brief",
+    "firstCustomer": "SDC Wellington merchant post-Station W news",
+    "revenue60Day": {
+      "low": 1000,
+      "high": 5000
+    }
+  },
+  "gtm": {
+    "firstTenCustomers": [
+      "SDC Wellington outreach",
+      "Verdun merchant association",
+      "Local press engagement"
+    ],
+    "channels": [
+      "SDC",
+      "Direct outreach"
+    ]
+  },
+  "assumptions": [
+    {
+      "statement": "Merchants share anonymous rent data",
+      "confidence": "hypothesis",
+      "testMethod": "SDC meeting + 10 interviews"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://montrealgazette.com/news/verdun-station-w-closing-rent-hike/",
+      "title": "Gazette Station W closing",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified",
+      "quote": "60% rent hike forced closure."
+    },
+    {
+      "url": "https://montreal.citynews.ca/2026/05/09/verdun-cafe-closing-commercial-rent/",
+      "title": "CityNews Verdun rent",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    },
+    {
+      "url": "https://www.cbc.ca/news/canada/montreal/ville-emard-commercial-rent-increases-1.7490193",
+      "title": "CBC Ville-Émard rent",
+      "accessedAt": "2026-05-23T18:00:00Z",
+      "grade": "B",
+      "signalType": "pain-verified"
+    }
+  ],
+  "gates": {
+    "g1_montrealAnchor": {
+      "passed": true,
+      "notes": "Wellington corridor hyper-local pain."
+    },
+    "g2_sevenDayShip": {
+      "passed": true,
+      "notes": "Form + dashboard + PDF = 7 days."
+    },
+    "g3_cashPath": {
+      "passed": true,
+      "notes": "10 briefs at $99-199."
+    },
+    "g4_soloOps": {
+      "passed": true,
+      "notes": "Concierge early, automate later."
+    },
+    "g5_legal": {
+      "passed": true,
+      "notes": "Data only, not legal advice."
+    },
+    "allPassed": true
+  },
+  "status": "collected",
+  "frameworkVersion": "1.0.0",
+  "collectedAt": "2026-05-23T18:00:00Z"
+}
