@@ -24,6 +24,14 @@ npm run pipeline:all          # Run all phases sequentially
 npm run ui                    # open http://localhost:5173
 ```
 
+## Services (ongoing agents, not pipeline phases)
+
+```bash
+npm run service:frontend                              # investigate & improve ui/
+npm run service:frontend -- "focus on mobile layout"  # with extra instructions
+npm run service:frontend -- --resume agent-XXXX       # resume interrupted run
+```
+
 ## Cloud (optional — walk away, laptop can close)
 
 Add to `.env`:

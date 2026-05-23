@@ -64,3 +64,84 @@ body {
 .markdown-body th {
   @apply bg-zinc-800 font-medium;
 }
+
+/* Brief reader — optimized for long-form reading */
+.brief-reader {
+  max-width: 52rem;
+}
+
+.brief-h1 {
+  @apply text-2xl font-bold text-white mb-2 leading-tight;
+}
+
+.brief-h2 {
+  @apply text-lg font-semibold text-white mt-8 mb-3 pt-6 border-t border-[var(--color-border)] first:mt-0 first:pt-0 first:border-t-0 scroll-mt-4;
+}
+
+.brief-h3 {
+  @apply text-base font-medium text-zinc-200 mt-4 mb-2;
+}
+
+.brief-p {
+  @apply mb-4 text-[15px] text-zinc-300 leading-7;
+}
+
+.brief-ul {
+  @apply mb-4 pl-5 list-disc space-y-1.5 text-[15px] text-zinc-300 leading-7;
+}
+
+.brief-ol {
+  @apply mb-4 pl-5 list-decimal space-y-1.5 text-[15px] text-zinc-300 leading-7;
+}
+
+.brief-li {
+  @apply pl-1;
+}
+
+.brief-hr {
+  @apply my-6 border-[var(--color-border)];
+}
+
+.brief-code {
+  @apply font-mono text-[13px] bg-zinc-800/80 text-emerald-300/90 px-1.5 py-0.5 rounded;
+}
+
+.brief-pre {
+  @apply bg-zinc-900/80 border border-[var(--color-border)] rounded-lg p-4 overflow-x-auto mb-5 text-[13px] leading-6 text-zinc-300;
+}
+
+.brief-pre code {
+  @apply bg-transparent p-0 text-inherit;
+}
+
+.brief-link {
+  @apply text-emerald-400 underline underline-offset-2 hover:text-emerald-300;
+}
+
+.brief-table-wrap {
+  @apply overflow-x-auto mb-5 rounded-lg border border-[var(--color-border)];
+}
+
+.brief-table {
+  @apply w-full text-sm border-collapse;
+}
+
+.brief-thead {
+  @apply bg-zinc-800/80;
+}
+
+.brief-th {
+  @apply px-4 py-2.5 text-left text-xs font-semibold uppercase tracking-wide text-zinc-300 border-b border-[var(--color-border)];
+}
+
+.brief-td {
+  @apply px-4 py-2.5 text-[14px] text-zinc-300 leading-relaxed border-b border-[var(--color-border)] align-top;
+}
+
+.brief-tr:last-child .brief-td {
+  @apply border-b-0;
+}
+
+.brief-tr:hover .brief-td {
+  @apply bg-zinc-800/30;
+}

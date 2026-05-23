@@ -13,6 +13,7 @@
     "pipeline:collect": "tsx src/cli.ts collect",
     "pipeline:rank": "tsx src/cli.ts rank",
     "pipeline:all": "tsx src/cli.ts all",
+    "service:frontend": "tsx src/service-frontend.ts",
     "ui": "npm run dev --prefix ui",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },

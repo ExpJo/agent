@@ -79,8 +79,8 @@ export default function App() {
         ) : ideas.length === 0 ? (
           <EmptyState />
         ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 h-[calc(100vh-8rem)]">
-            <aside className="lg:col-span-2 flex flex-col min-h-0">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-[calc(100vh-7rem)]">
+            <aside className="lg:col-span-4 xl:col-span-3 flex flex-col min-h-0">
               <div className="flex flex-wrap gap-2 mb-4">
                 {(["all", "starred", "interested", "maybe", "dismissed"] as const).map(
                   (f) => (
@@ -118,7 +118,7 @@ export default function App() {
               </div>
             </aside>
 
-            <section className="lg:col-span-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-panel)] p-6 overflow-hidden min-h-0">
+            <section className="lg:col-span-8 xl:col-span-9 rounded-xl border border-[var(--color-border)] bg-[var(--color-panel)] p-5 lg:p-6 overflow-hidden min-h-0 flex flex-col">
               {selected ? (
                 <IdeaDetail
                   idea={selected}
